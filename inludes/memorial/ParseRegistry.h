@@ -10,6 +10,7 @@
 using namespace OpenXLSX;
 using namespace std;
 
+/*
 class XLSParser {
 public:
     XLSParser(RegistryStorage& registry_storage, std::vector<std::string>&& file_names)
@@ -42,5 +43,6 @@ private:
     RegistryStorage& storage_;
     std::vector<std::string> file_names_;
 };
+*/
 
 #endif //PARSEREGISTRY_H

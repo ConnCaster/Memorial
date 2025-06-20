@@ -4,28 +4,17 @@
 #include <unordered_map>
 #include <vector>
 
-class RegistryStorage {
+class Vedomost {
 public:
-    RegistryStorage() = default;
+    Vedomost() = default;
 
-    void AppendRegistry(const std::string& file_name) {
-        if (content_.find(file_name) == content_.end()) {
-            content_[file_name] = {};
-        }
-    }
-
-    void AppendEntryToRegistry(const std::string& file_name, const RegistryEntry& entry) {
-        if (content_.find(file_name) != content_.end()) {
-            content_[file_name].push_back(entry);
-        }
-    }
 
 private:
-    /*
-     * key   [std::string] - имя файла ведомости
-     * value [std::vector<RegistryEntry>] - набор записей (строк) из ведомости
-     */
-    std::unordered_map<std::string, std::vector<RegistryEntry>> content_{};
+    unsigned int report_number_;
+    std::string report_date_;
+    std::string report_source_;
+    std::vector<RegistryEntry> soldiers_;
+
 };
 
 #endif //REGISTRY_H
