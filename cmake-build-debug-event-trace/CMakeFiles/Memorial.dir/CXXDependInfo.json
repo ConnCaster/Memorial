@@ -1,0 +1,35 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace",
+	"dir-cur-src" : "/home/user/dir/programming/C++/Yaroslava/Memorial",
+	"dir-top-bld" : "/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace",
+	"dir-top-src" : "/home/user/dir/programming/C++/Yaroslava/Memorial",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/include",
+		"/usr/local/include/mongocxx/v_noabi",
+		"/usr/local/include/bsoncxx/v_noabi",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers",
+		"3rd_party/OpenXLSX/OpenXLSX"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/CMakeFiles/Memorial.dir",
+	"sources" : 
+	{
+		"CMakeFiles/Memorial.dir/main.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/user/dir/programming/C++/Yaroslava/Memorial/main.cpp"
+		}
+	}
+}

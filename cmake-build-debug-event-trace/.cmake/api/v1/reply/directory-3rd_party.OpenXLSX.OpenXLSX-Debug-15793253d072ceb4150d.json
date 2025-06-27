@@ -1,0 +1,165 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"3rd_party/OpenXLSX/OpenXLSX/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 290,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 296,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 301,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 307,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 327,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 346,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/OpenXLSX/headers",
+			"paths" : 
+			[
+				"cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/OpenXLSX/headers",
+			"paths" : 
+			[
+				"3rd_party/OpenXLSX/OpenXLSX/headers/IZipArchive.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLCell.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLCellIterator.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLCellRange.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLCellReference.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLCellValue.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLColor.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLColumn.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLCommandQuery.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLComments.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLConstants.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLContentTypes.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLDateTime.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLDocument.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLDrawing.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLException.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLFormula.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLIterator.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLMergeCells.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLProperties.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLRelationships.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLRow.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLRowData.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLSharedStrings.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLSheet.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLStyles.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLTables.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLWorkbook.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLXmlData.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLXmlFile.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLXmlParser.hpp",
+				"3rd_party/OpenXLSX/OpenXLSX/headers/XLZipArchive.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/OpenXLSX",
+			"paths" : 
+			[
+				"3rd_party/OpenXLSX/OpenXLSX/OpenXLSX.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "lib",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"output/libOpenXLSXd.a"
+			],
+			"targetId" : "OpenXLSX::@15f89c669669447f7974",
+			"targetIndex" : 11,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/OpenXLSX",
+			"paths" : 
+			[
+				"3rd_party/OpenXLSX/OpenXLSX/OpenXLSXConfig.cmake",
+				"cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX/OpenXLSX/OpenXLSXConfigVersion.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/OpenXLSX",
+			"exportName" : "OpenXLSXTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "OpenXLSX::@15f89c669669447f7974",
+					"index" : 11
+				}
+			],
+			"paths" : 
+			[
+				"3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/Export/c72cc94553a1a0c9b05f75dae42fb1d7/OpenXLSXTargets.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "3rd_party/OpenXLSX/OpenXLSX",
+		"source" : "3rd_party/OpenXLSX/OpenXLSX"
+	}
+}

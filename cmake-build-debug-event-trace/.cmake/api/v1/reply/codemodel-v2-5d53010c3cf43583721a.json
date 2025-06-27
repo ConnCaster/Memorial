@@ -1,0 +1,306 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "3rd_party/OpenXLSX",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.OpenXLSX-Debug-c2690eb50d6ba80aa15e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "3rd_party/OpenXLSX"
+				},
+				{
+					"build" : "3rd_party/OpenXLSX/OpenXLSX",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.OpenXLSX.OpenXLSX-Debug-15793253d072ceb4150d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "3rd_party/OpenXLSX/OpenXLSX",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "3rd_party/OpenXLSX/Documentation",
+					"jsonFile" : "directory-3rd_party.OpenXLSX.Documentation-Debug-6e71b591d28763e4dd20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "3rd_party/OpenXLSX/Documentation"
+				},
+				{
+					"build" : "3rd_party/OpenXLSX/Examples",
+					"jsonFile" : "directory-3rd_party.OpenXLSX.Examples-Debug-73e2af6c9464e9d53f15.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 4,
+					"source" : "3rd_party/OpenXLSX/Examples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"build" : "3rd_party/OpenXLSX/Tests",
+					"jsonFile" : "directory-3rd_party.OpenXLSX.Tests-Debug-41cbac2bf776dfede7a4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 5,
+					"source" : "3rd_party/OpenXLSX/Tests",
+					"targetIndexes" : 
+					[
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Memorial",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "OpenXLSX",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "OpenXLSX.Library",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "OpenXLSX.Documentation",
+					"parentIndex" : 1
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "OpenXLSX.Examples",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "OpenXLSX.Tests",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo1::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo1-Debug-1838a41b2072658565e4.json",
+					"name" : "Demo1",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo10::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo10-Debug-fb735e5c132fd9a914e7.json",
+					"name" : "Demo10",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo2::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo2-Debug-c6f47927880e6346069e.json",
+					"name" : "Demo2",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo3::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo3-Debug-210418c787e9d5d63102.json",
+					"name" : "Demo3",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo4::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo4-Debug-83e6e2032d86e8d26ede.json",
+					"name" : "Demo4",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo5::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo5-Debug-172db9042e144b77db14.json",
+					"name" : "Demo5",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo6::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo6-Debug-f1e9c4723a2787fa6481.json",
+					"name" : "Demo6",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo7::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo7-Debug-8c23248c3cdae4e5b457.json",
+					"name" : "Demo7",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo8::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo8-Debug-6e6ae394c6b5c322bf30.json",
+					"name" : "Demo8",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo9::@12ea02538e2ab65ad398",
+					"jsonFile" : "target-Demo9-Debug-df83bfd4b3d36ed50551.json",
+					"name" : "Demo9",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Memorial::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Memorial-Debug-460556e294b7ca0bd651.json",
+					"name" : "Memorial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "OpenXLSX::@15f89c669669447f7974",
+					"jsonFile" : "target-OpenXLSX-Debug-acf0fa8022ff304d18d0.json",
+					"name" : "OpenXLSX",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "OpenXLSXTests::@367d2cf836f25e469e66",
+					"jsonFile" : "target-OpenXLSXTests-Debug-1db901dd0d3d5a0f8a89.json",
+					"name" : "OpenXLSXTests",
+					"projectIndex" : 5
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace",
+		"source" : "/home/user/dir/programming/C++/Yaroslava/Memorial"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
