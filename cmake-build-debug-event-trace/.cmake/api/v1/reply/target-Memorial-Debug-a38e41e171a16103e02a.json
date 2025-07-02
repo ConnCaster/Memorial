@@ -32,13 +32,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 45,
+				"line" : 46,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 38,
+				"line" : 39,
 				"parent" : 0
 			}
 		]
@@ -173,7 +173,8 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -188,6 +189,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "include/memorial/VedomostSearcher.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/memorial/cxxopts/cxxopts.h",
 			"sourceGroupIndex" : 1
 		}
 	],

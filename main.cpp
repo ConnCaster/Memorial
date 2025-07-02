@@ -9,8 +9,30 @@
 
 #include "memorial/Vedomost.h"
 #include "memorial/ParsePassport.h"
+#include "memorial/cxxopts/cxxopts.h"
 
-int main() {
+int main(int argc, char* argv[]) {
+    cxxopts::Options options("Memorial",
+        "Vedomost Searcher: программа для поиска ведомости захоронения, в которой больше всего воинов совпадает с заданным паспортом захоронения");
+
+    options.add_options()
+      ("d,directory", "Директория с паспортами захоронений в формате .xlsx", cxxopts::value<std::string>())
+      ("u,upload", "Режим загрузки ведомостей в БД", cxxopts::value<bool>())
+      ("h,help", "Вывести краткое руководство по запуску приложения")
+      ;
+
+    auto result = options.parse(argc, argv);
+    if (result.count("help")) {
+        std::cout << options.help() << std::endl;
+        exit(0);
+    }
+    std::string passport_directory_path{};
+    if (result.count("directory")) {
+        passport_directory_path = result["directory"].as<std::string>();
+        std::cout << "Путь к директории с паспортами: " << passport_directory_path << std::endl;
+    }
+
+
     using bsoncxx::builder::basic::kvp;
     using bsoncxx::builder::basic::make_document;
 
