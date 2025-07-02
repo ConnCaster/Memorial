@@ -9,6 +9,7 @@
 
 class Vedomost {
 public:
+    Vedomost() = default;
     Vedomost(const bsoncxx::v_noabi::document::view& vedomost) {
         try {
             if (vedomost["report_number"] && vedomost["report_number"].type() == bsoncxx::type::k_int32) {
@@ -46,7 +47,14 @@ public:
             content += soldier.GetInfo() + "\n";
         }
         return content;
+    }
 
+    std::vector<SoldierEntry>& GetSoldierd() {
+        return soldiers_;
+    }
+
+    unsigned int GetVedomostNumber() const {
+        return report_number_;
     }
 
 private:
@@ -54,7 +62,6 @@ private:
     std::string report_date_;
     std::string report_source_;
     std::vector<SoldierEntry> soldiers_;
-
 };
 
 #endif //VEDOMOST_H

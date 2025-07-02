@@ -101,9 +101,13 @@ public:
         // TODO: Доделать при необходимости
         std::string info = "\tФамилия: " + last_name_ +
                            "\n\tИмя: " + first_name_ +
-                           "\n\tОтчество: " + patronymic_ + "\n";
+                           "\n\tОтчество: " + patronymic_ +
+                           "\n\tМесто захоронения: " + burial_place_ + "\n===========================\n";
         return info;
     }
+
+    friend bool operator==(const SoldierEntry &l, const SoldierEntry &r);
+
 
 private:
     std::string last_name_;
@@ -124,5 +128,12 @@ private:
     std::string link_{};   // TODO: добавить в БД, если нужно
     std::string file_{};   // TODO: добавить в БД, если нужно
 };
+
+bool operator==(const SoldierEntry &l, const SoldierEntry &r) {
+    return l.last_name_ == r.last_name_ &&
+            l.first_name_ == r.first_name_ &&
+            l.patronymic_ == r.patronymic_ &&
+            l.burial_place_ == r.burial_place_;
+}
 
 #endif //SOLDIERENTRY_H

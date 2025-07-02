@@ -66,8 +66,6 @@ build CMakeFiles/Memorial.dir/main.cpp.o: CXX_COMPILER__Memorial_scanned_Debug /
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/include -I/usr/local/include/mongocxx/v_noabi -I/usr/local/include/bsoncxx/v_noabi -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = CMakeFiles/Memorial.dir
   OBJECT_FILE_DIR = CMakeFiles/Memorial.dir
-  TARGET_COMPILE_PDB = CMakeFiles/Memorial.dir/
-  TARGET_PDB = Memorial.pdb
   dyndep = CMakeFiles/Memorial.dir/CXX.dd
 
 build CMakeFiles/Memorial.dir/CXX.dd | /home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/CMakeFiles/Memorial.dir/CXXModules.json CMakeFiles/Memorial.dir/main.cpp.o.modmap: CXX_DYNDEP__Memorial_Debug CMakeFiles/Memorial.dir/main.cpp.o.ddi | /home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/CMakeFiles/Memorial.dir/CXXDependInfo.json
@@ -88,9 +86,8 @@ build Memorial: CXX_EXECUTABLE_LINKER__Memorial_Debug CMakeFiles/Memorial.dir/ma
   OBJECT_DIR = CMakeFiles/Memorial.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/Memorial.dir/
   TARGET_FILE = Memorial
-  TARGET_PDB = Memorial.pdb
+  TARGET_PDB = Memorial.dbg
 
 
 #############################################
@@ -248,8 +245,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCell.cpp.o: 
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellIterator.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLCellIterator.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -258,8 +253,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellIterator
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellRange.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLCellRange.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -268,8 +261,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellRange.cp
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellReference.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLCellReference.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -278,8 +269,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellReferenc
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellValue.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLCellValue.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -288,8 +277,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellValue.cp
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColor.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLColor.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -298,8 +285,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColor.cpp.o:
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColumn.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLColumn.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -308,8 +293,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColumn.cpp.o
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLComments.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLComments.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -318,8 +301,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLComments.cpp
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLContentTypes.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLContentTypes.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -328,8 +309,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLContentTypes
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDateTime.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLDateTime.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -338,8 +317,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDateTime.cpp
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDocument.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLDocument.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -348,8 +325,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDocument.cpp
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDrawing.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLDrawing.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -358,8 +333,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDrawing.cpp.
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLFormula.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLFormula.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -368,8 +341,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLFormula.cpp.
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLMergeCells.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLMergeCells.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -378,8 +349,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLMergeCells.c
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLProperties.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLProperties.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -388,8 +357,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLProperties.c
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRelationships.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLRelationships.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -398,8 +365,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRelationship
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRow.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLRow.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -408,8 +373,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRow.cpp.o: C
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRowData.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLRowData.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -418,8 +381,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRowData.cpp.
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSharedStrings.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLSharedStrings.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -428,8 +389,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSharedString
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSheet.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLSheet.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -438,8 +397,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSheet.cpp.o:
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLStyles.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLStyles.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -448,8 +405,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLStyles.cpp.o
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLTables.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLTables.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -458,8 +413,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLTables.cpp.o
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLWorkbook.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLWorkbook.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -468,8 +421,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLWorkbook.cpp
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlData.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLXmlData.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -478,8 +429,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlData.cpp.
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlFile.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLXmlFile.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -488,8 +437,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlFile.cpp.
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlParser.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLXmlParser.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -498,8 +445,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlParser.cp
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLZipArchive.cpp.o: CXX_COMPILER__OpenXLSX_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/sources/XLZipArchive.cpp || cmake_object_order_depends_target_OpenXLSX
   DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
@@ -508,8 +453,6 @@ build 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLZipArchive.c
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/zippy -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/external/pugixml
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
-  TARGET_PDB = output/libOpenXLSXd.pdb
 
 
 # =============================================================================
@@ -524,9 +467,8 @@ build output/libOpenXLSXd.a: CXX_STATIC_LIBRARY_LINKER__OpenXLSX_Debug 3rd_party
   OBJECT_DIR = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/OpenXLSX.pdb
   TARGET_FILE = output/libOpenXLSXd.a
-  TARGET_PDB = output/libOpenXLSXd.pdb
+  TARGET_PDB = OpenXLSXd.a.dbg
 
 
 #############################################
@@ -684,8 +626,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo1.dir/Demo1.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo1.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo1.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo1.dir/
-  TARGET_PDB = output/Demo1.pdb
 
 
 # =============================================================================
@@ -703,9 +643,8 @@ build output/Demo1: CXX_EXECUTABLE_LINKER__Demo1_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo1.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo1.dir/
   TARGET_FILE = output/Demo1
-  TARGET_PDB = output/Demo1.pdb
+  TARGET_PDB = Demo1.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo2
@@ -723,8 +662,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo2.dir/Demo2.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo2.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo2.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo2.dir/
-  TARGET_PDB = output/Demo2.pdb
 
 
 # =============================================================================
@@ -742,9 +679,8 @@ build output/Demo2: CXX_EXECUTABLE_LINKER__Demo2_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo2.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo2.dir/
   TARGET_FILE = output/Demo2
-  TARGET_PDB = output/Demo2.pdb
+  TARGET_PDB = Demo2.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo3
@@ -762,8 +698,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo3.dir/Demo3.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo3.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo3.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo3.dir/
-  TARGET_PDB = output/Demo3.pdb
 
 
 # =============================================================================
@@ -781,9 +715,8 @@ build output/Demo3: CXX_EXECUTABLE_LINKER__Demo3_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo3.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo3.dir/
   TARGET_FILE = output/Demo3
-  TARGET_PDB = output/Demo3.pdb
+  TARGET_PDB = Demo3.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo4
@@ -801,8 +734,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo4.dir/Demo4.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo4.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo4.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo4.dir/
-  TARGET_PDB = output/Demo4.pdb
 
 
 # =============================================================================
@@ -820,9 +751,8 @@ build output/Demo4: CXX_EXECUTABLE_LINKER__Demo4_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo4.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo4.dir/
   TARGET_FILE = output/Demo4
-  TARGET_PDB = output/Demo4.pdb
+  TARGET_PDB = Demo4.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo5
@@ -840,8 +770,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo5.dir/Demo5.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo5.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo5.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo5.dir/
-  TARGET_PDB = output/Demo5.pdb
 
 
 # =============================================================================
@@ -859,9 +787,8 @@ build output/Demo5: CXX_EXECUTABLE_LINKER__Demo5_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo5.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo5.dir/
   TARGET_FILE = output/Demo5
-  TARGET_PDB = output/Demo5.pdb
+  TARGET_PDB = Demo5.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo6
@@ -879,8 +806,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo6.dir/Demo6.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo6.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo6.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo6.dir/
-  TARGET_PDB = output/Demo6.pdb
 
 
 # =============================================================================
@@ -898,9 +823,8 @@ build output/Demo6: CXX_EXECUTABLE_LINKER__Demo6_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo6.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo6.dir/
   TARGET_FILE = output/Demo6
-  TARGET_PDB = output/Demo6.pdb
+  TARGET_PDB = Demo6.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo7
@@ -918,8 +842,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo7.dir/Demo7.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo7.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo7.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo7.dir/
-  TARGET_PDB = output/Demo7.pdb
 
 
 # =============================================================================
@@ -937,9 +859,8 @@ build output/Demo7: CXX_EXECUTABLE_LINKER__Demo7_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo7.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo7.dir/
   TARGET_FILE = output/Demo7
-  TARGET_PDB = output/Demo7.pdb
+  TARGET_PDB = Demo7.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo8
@@ -957,8 +878,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo8.dir/Demo8.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo8.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo8.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo8.dir/
-  TARGET_PDB = output/Demo8.pdb
 
 
 # =============================================================================
@@ -976,9 +895,8 @@ build output/Demo8: CXX_EXECUTABLE_LINKER__Demo8_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo8.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo8.dir/
   TARGET_FILE = output/Demo8
-  TARGET_PDB = output/Demo8.pdb
+  TARGET_PDB = Demo8.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo9
@@ -996,8 +914,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo9.dir/Demo9.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo9.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo9.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo9.dir/
-  TARGET_PDB = output/Demo9.pdb
 
 
 # =============================================================================
@@ -1015,9 +931,8 @@ build output/Demo9: CXX_EXECUTABLE_LINKER__Demo9_Debug 3rd_party/OpenXLSX/Exampl
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo9.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo9.dir/
   TARGET_FILE = output/Demo9
-  TARGET_PDB = output/Demo9.pdb
+  TARGET_PDB = Demo9.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Demo10
@@ -1035,8 +950,6 @@ build 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo10.dir/Demo10.cpp.o: CXX_COMPIL
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo10.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo10.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo10.dir/
-  TARGET_PDB = output/Demo10.pdb
 
 
 # =============================================================================
@@ -1054,9 +967,8 @@ build output/Demo10: CXX_EXECUTABLE_LINKER__Demo10_Debug 3rd_party/OpenXLSX/Exam
   OBJECT_DIR = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo10.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Examples/CMakeFiles/Demo10.dir/
   TARGET_FILE = output/Demo10
-  TARGET_PDB = output/Demo10.pdb
+  TARGET_PDB = Demo10.dbg
 
 
 #############################################
@@ -1144,8 +1056,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/main.cpp.o: CXX_COMP
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLDocument.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLDocument.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1154,8 +1064,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLDocument.cpp.o
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCell.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLCell.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1164,8 +1072,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCell.cpp.o: CX
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellRange.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLCellRange.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1174,8 +1080,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellRange.cpp.
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellReference.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLCellReference.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1184,8 +1088,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellReference.
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellValue.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLCellValue.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1194,8 +1096,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellValue.cpp.
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellValueProxy.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLCellValueProxy.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1204,8 +1104,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellValueProxy
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLColor.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLColor.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1214,8 +1112,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLColor.cpp.o: C
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLDateTime.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLDateTime.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1224,8 +1120,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLDateTime.cpp.o
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLFormula.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLFormula.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1234,8 +1128,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLFormula.cpp.o:
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLRow.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLRow.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1244,8 +1136,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLRow.cpp.o: CXX
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLSheet.cpp.o: CXX_COMPILER__OpenXLSXTests_unscanned_Debug /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/testXLSheet.cpp || cmake_object_order_depends_target_OpenXLSXTests
   DEFINES = -DOPENXLSX_STATIC_DEFINE
@@ -1254,8 +1144,6 @@ build 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLSheet.cpp.o: C
   INCLUDES = -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX -I/home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/headers -I/home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace/3rd_party/OpenXLSX/OpenXLSX -isystem /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/catch
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   OBJECT_FILE_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
-  TARGET_PDB = output/OpenXLSXTests.pdb
 
 
 # =============================================================================
@@ -1273,9 +1161,8 @@ build output/OpenXLSXTests: CXX_EXECUTABLE_LINKER__OpenXLSXTests_Debug 3rd_party
   OBJECT_DIR = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = 3rd_party/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/
   TARGET_FILE = output/OpenXLSXTests
-  TARGET_PDB = output/OpenXLSXTests.pdb
+  TARGET_PDB = OpenXLSXTests.dbg
 
 
 #############################################
@@ -1465,14 +1352,14 @@ build 3rd_party/OpenXLSX/Tests/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Documentation/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Examples/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/OpenXLSXConfig.cmake /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/CMakeLists.txt /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompiler.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompiler.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCompilerIdDetection.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeFindBinUtils.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseImplicitIncludeInfo.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseImplicitLinkInfo.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseLibraryArchitecture.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystem.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCompilerCommon.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ADSP-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ARMCC-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ARMClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/AppleClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CrayClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-FindBinUtils.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/HP-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IAR-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Intel-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/LCC-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/MSVC-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/NVHPC-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/OrangeC-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/PGI-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/PathScale-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SCO-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TI-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TIClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Tasking-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Watcom-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XL-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/zOS-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindDoxygen.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/GNUInstallDirs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/GenerateExportHeader.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckFlagCommonConfig.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Determine-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/exportheader.cmake.in CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Documentation/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Examples/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/OpenXLSXConfig.cmake /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/CMakeLists.txt /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindDoxygen.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/GNUInstallDirs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/GenerateExportHeader.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckFlagCommonConfig.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/exportheader.cmake.in CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Documentation/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Examples/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/OpenXLSXConfig.cmake /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/CMakeLists.txt /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompiler.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompiler.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCompilerIdDetection.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeFindBinUtils.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseImplicitIncludeInfo.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseImplicitLinkInfo.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseLibraryArchitecture.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystem.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCompilerCommon.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ADSP-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ARMCC-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ARMClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/AppleClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CrayClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-FindBinUtils.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/HP-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IAR-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Intel-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/LCC-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/MSVC-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/NVHPC-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/OrangeC-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/PGI-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/PathScale-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SCO-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TI-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TIClang-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Tasking-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Watcom-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XL-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/zOS-C-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindDoxygen.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/GNUInstallDirs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/GenerateExportHeader.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckFlagCommonConfig.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Determine-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/exportheader.cmake.in CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
+build /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Documentation/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Examples/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/OpenXLSX/OpenXLSXConfig.cmake /home/user/dir/programming/C++/Yaroslava/Memorial/3rd_party/OpenXLSX/Tests/CMakeLists.txt /home/user/dir/programming/C++/Yaroslava/Memorial/CMakeLists.txt /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindDoxygen.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/GNUInstallDirs.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/GenerateExportHeader.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckFlagCommonConfig.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /home/user/dir/soft/CLion-2024.3.4/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.31/Modules/exportheader.cmake.in CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
 
 
 #############################################

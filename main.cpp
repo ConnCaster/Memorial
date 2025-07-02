@@ -26,15 +26,6 @@ int main() {
         PassportParser parser{vedomosti_collection, {"/home/user/dir/programming/C++/Yaroslava/Memorial/input/passport_new.xlsx"}};
         parser.Run();
 
-        // auto opts = mongocxx::options::find{};
-        // opts.no_cursor_timeout(true);
-        // opts.batch_size(10);
-        //
-        // auto cursor = vedomosti_collection.find({}, opts);   // make_document(kvp("report_number", 11879))
-        // for (auto& vedomost: cursor) {
-        //     Vedomost vdmst{vedomost};
-        //     std::cout << vdmst.GetContent() << std::endl;
-        // }
         return EXIT_SUCCESS;
     } catch (std::exception const& ex) {
         std::cout << "connection failed: " << ex.what() << std::endl;
@@ -42,19 +33,12 @@ int main() {
     }
 }
 
-
-/*#include <iostream>
-
-#include "memorial/ParseRegistry.h"
-
-int main() {
-
-    // RegistryStorage registry_storage{};
-    //
-    // XLSParser parser{registry_storage, {"/home/user/dir/programming/C++/Yaroslava/Memorial/input/vedomost.xlsx"}};
-    // parser.Run();
-
-
-
-    return 0;
-}*/
+/*
+ * TODO:
+ * 1. Механизм заливки в БД новых ведомостей
+ * 2. Механизм перечитывания директории с паспортами (
+ *          аргументом программе дается путь к директории с паспортами, а мы получаем из нее имена всех файлов паспортов
+ *          и используем их для наших поисков)
+ * 3.
+ *
+ */

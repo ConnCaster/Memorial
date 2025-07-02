@@ -7,6 +7,7 @@
 #include <mongocxx/collection.hpp>
 
 #include "Vedomost.h"
+#include "VedomostSearcher.h"
 
 
 using namespace OpenXLSX;
@@ -33,20 +34,12 @@ public:
             opts.batch_size(10);
             auto cursor = vedomosti_collection_.find({}, opts);
 
-            XLWorksheet wks = xlsx_file.workbook().worksheet("Sheet1");
-            XLCellRange rng = wks.range(XLCellReference("A1"), XLCellReference("Q2"));
-            cout << "Cell count: " << std::distance(rng.begin(), rng.end()) << endl;
+            XLWorksheet passport_worksheet = xlsx_file.workbook().worksheet("Sheet1");
 
-            for (const auto& line : wks.rows()) {
-                for (const auto& cell : line.cells()) {
-                    std::cout << cell.value() << std::endl;
-                    // TODO: искать солдата в списках ведомостей
-                    for (auto& vedomost: cursor) {
-                        Vedomost vdmst{vedomost};
-                        std::cout << vdmst.GetContent() << std::endl;
-                    }
-                }
-            }
+            VedomostSearcher vedomost_searcher{passport_worksheet, std::move(cursor)};
+            Vedomost found_vedomost = vedomost_searcher.Search();
+            std::cout << "[FOUND] " << found_vedomost.GetContent() << std::endl;
+
             xlsx_file.close();
         }
     }
