@@ -2,6 +2,8 @@
 #define SOLDIERENTRY_H
 
 #include <string>
+#include <locale>
+#include <codecvt>
 #include <bsoncxx/builder/basic/document.hpp>
 
 class SoldierEntry {
@@ -108,8 +110,11 @@ public:
 
     friend bool operator==(const SoldierEntry &l, const SoldierEntry &r);
 
-
+#ifdef BUILD_GOOGLE_TEST
+public:
+#else
 private:
+#endif
     std::string last_name_;
     std::string first_name_;
     std::string patronymic_;
@@ -129,11 +134,110 @@ private:
     std::string file_{};   // TODO: добавить в БД, если нужно
 };
 
+namespace compare_utils {
+
+    void StrToLower(std::string& str) {
+        std::for_each(str.begin(), str.end(), [](char c){ return tolower(c); });
+    }
+
+    std::string StrToLower(const std::string& str) {
+        std::wstring_convert<std::codecvt_utf8<wchar_t>> conv;
+        std::wstring wide_str = conv.from_bytes(str);
+
+        std::locale loc("ru_RU.UTF-8");  // Локаль для кириллицы
+        for (wchar_t& c : wide_str) {
+            c = std::tolower(c, loc);
+        }
+        return conv.to_bytes(wide_str);
+    }
+
+    std::string Strip(const std::string& str) {
+        if (str.empty()) {
+            return str;
+        }
+
+        size_t start = 0;
+        while (start < str.size() && (std::isspace(str[start]) || std::ispunct(str[start]))) {
+            ++start;
+        }
+
+        if (start == str.size()) {
+            return "";
+        }
+
+        size_t end = str.size() - 1;
+        while (end > start && (std::isspace(str[end]) || std::ispunct(str[end]))) {
+            --end;
+        }
+
+        return str.substr(start, end - start + 1);
+    }
+
+    size_t utf8_strlen(const std::string& str) {
+        setlocale(LC_ALL, "en_US.utf8");  // Устанавливаем локаль для UTF-8
+
+        size_t char_count = 0;
+        mbstate_t state = {};
+        const char* ptr = str.c_str();
+        const char* end = ptr + str.size();
+
+        while (ptr < end) {
+            size_t len = mbrlen(ptr, end - ptr, &state);
+            if (len == (size_t)-1 || len == (size_t)-2) {
+                // Некорректный UTF-8 символ
+                break;
+            }
+            ptr += len;
+            char_count++;
+        }
+
+        return char_count;
+    }
+
+    // ===================================================================
+    bool CompareLastName(const std::string& l, const std::string& r) {
+        std::string left = StrToLower(l);
+        std::string right = StrToLower(r);
+        if (left == "null" || right == "null") return false;
+        return left == right;
+    }
+
+    bool CompareFirstName(const std::string& l, const std::string& r) {
+        std::string left = StrToLower(l);
+        std::string right = StrToLower(r);
+        if (left == "null" || right == "null") return false;
+        if (utf8_strlen(left) == 1 || utf8_strlen(right) == 1) {
+            return left[0] == right[0];
+        }
+        return left == right;
+    }
+
+    bool ComparePatronimic(const std::string& l, const std::string& r) {
+        std::string left = StrToLower(l);
+        std::string right = StrToLower(r);
+        if (left == "null" || right == "null") return true;
+        if (utf8_strlen(left) == 1 || utf8_strlen(right) == 1) {
+            return left[0] == right[0];
+        }
+        return left == right;
+    }
+
+    bool CompareBirthdate(const std::string& l, const std::string& r) {
+        // TODO: парсить год, месяц, день
+        std::string left = StrToLower(l);
+        std::string right = StrToLower(r);
+        if (left == "null" || right == "null") return true;
+        if (left == "/Возраст" || right == "/Возраст") return true;
+        return left == right;
+    }
+
+}
+
 bool operator==(const SoldierEntry &l, const SoldierEntry &r) {
-    return l.last_name_ == r.last_name_ &&
-            l.first_name_ == r.first_name_ &&
-            l.patronymic_ == r.patronymic_ &&
-            l.burial_place_ == r.burial_place_;
+    return compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
+            compare_utils::CompareFirstName(compare_utils::Strip(l.first_name_), compare_utils::Strip(r.first_name_)) &&
+            compare_utils::ComparePatronimic(compare_utils::Strip(l.patronymic_), compare_utils::Strip(r.patronymic_)) &&
+            compare_utils::CompareBirthdate(l.birthdate_, r.birthdate_);  // TODO: пропускать при false
 }
 
 #endif //SOLDIERENTRY_H

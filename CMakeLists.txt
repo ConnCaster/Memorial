@@ -33,9 +33,10 @@ message(STATUS "BSON_C: ${BSON_C}")
 set(MONGOCXX_INCLUDE_DIRS "/usr/local/include/mongocxx/v_noabi")
 set(BSONCXX_INCLUDE_DIRS "/usr/local/include/bsoncxx/v_noabi")
 
-add_executable(Memorial main.cpp
-        include/memorial/VedomostSearcher.h
-        include/memorial/cxxopts/cxxopts.h)
+add_executable(Memorial
+        main.cpp
+        include/memorial/cxxopts/cxxopts.h
+        )
 target_include_directories(Memorial PRIVATE
         include
         ${MONGOCXX_INCLUDE_DIRS}
@@ -50,3 +51,37 @@ target_link_libraries(Memorial
         ${MONGOC_C}
         ${BSON_C}
 )
+
+
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/refs/tags/v1.17.0.zip
+)
+
+
+FetchContent_MakeAvailable(googletest)
+
+if(WIN32)
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+endif()
+
+add_executable(tests_google tests/google_tests.cpp)
+target_include_directories(tests_google PUBLIC
+        include
+        ${MONGOCXX_INCLUDE_DIRS}
+        ${BSONCXX_INCLUDE_DIRS}
+)
+target_link_libraries(tests_google
+        gtest
+        gtest_main
+        OpenXLSX::OpenXLSX
+        ${MONGOCXX}
+        ${BSONCXX}
+        ${MONGOC_C}
+        ${BSON_C}
+)
+target_compile_definitions(tests_google PUBLIC BUILD_GOOGLE_TEST)
+enable_testing()
+
+#add_test(NAME UserLoggerTests COMMAND tests_google)
