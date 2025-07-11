@@ -9,41 +9,41 @@
 class SoldierEntry {
 public:
     SoldierEntry(
-            const std::string& last_name,
-            const std::string& first_name,
-            const std::string& patronymic,
-            const std::string& birthdate,
-            const std::string& birth_place,
-            const std::string& conscription_date_and_place,
-            const std::string& last_duty_place,
-            const std::string& military_rank,
-            const std::string& loss_reason,
-            const std::string& loss_date,
-            const std::string& burial_place,
-            const std::string& report_source,
-            const std::string& source_fund_number,
-            const std::string& source_inventory_number,
-            const std::string& source_case_number,
-            const std::string& link,
-            const std::string& file
-        ) : last_name_(last_name),
-            first_name_(first_name),
-            patronymic_(patronymic),
-            birthdate_(birthdate),
-            birth_place_(birth_place),
-            conscription_date_and_place_(conscription_date_and_place),
-            last_duty_place_(last_duty_place),
-            military_rank_(military_rank),
-            loss_reason_(loss_reason),
-            loss_date_(loss_date),
-            burial_place_(burial_place),
-            report_source_(report_source),
-            source_fund_number_(source_fund_number),
-            source_inventory_number_(source_inventory_number),
-            source_case_number_(source_case_number)
-    {}
+        const std::string &last_name,
+        const std::string &first_name,
+        const std::string &patronymic,
+        const std::string &birthdate,
+        const std::string &birth_place,
+        const std::string &conscription_date_and_place,
+        const std::string &last_duty_place,
+        const std::string &military_rank,
+        const std::string &loss_reason,
+        const std::string &loss_date,
+        const std::string &burial_place,
+        const std::string &report_source,
+        const std::string &source_fund_number,
+        const std::string &source_inventory_number,
+        const std::string &source_case_number,
+        const std::string &link,
+        const std::string &file
+    ) : last_name_(last_name),
+        first_name_(first_name),
+        patronymic_(patronymic),
+        birthdate_(birthdate),
+        birth_place_(birth_place),
+        conscription_date_and_place_(conscription_date_and_place),
+        last_duty_place_(last_duty_place),
+        military_rank_(military_rank),
+        loss_reason_(loss_reason),
+        loss_date_(loss_date),
+        burial_place_(burial_place),
+        report_source_(report_source),
+        source_fund_number_(source_fund_number),
+        source_inventory_number_(source_inventory_number),
+        source_case_number_(source_case_number) {
+    }
 
-    SoldierEntry(const bsoncxx::array::element& soldier) {
+    SoldierEntry(const bsoncxx::array::element &soldier) {
         try {
             if (soldier["last_name"] && soldier["last_name"].type() == bsoncxx::type::k_string) {
                 last_name_ = soldier["last_name"].get_string().value;
@@ -60,7 +60,8 @@ public:
             if (soldier["birth_place"] && soldier["birth_place"].type() == bsoncxx::type::k_string) {
                 birth_place_ = soldier["birth_place"].get_string().value;
             }
-            if (soldier["conscription_date_and_place"] && soldier["conscription_date_and_place"].type() == bsoncxx::type::k_string) {
+            if (soldier["conscription_date_and_place"] && soldier["conscription_date_and_place"].type() ==
+                bsoncxx::type::k_string) {
                 conscription_date_and_place_ = soldier["conscription_date_and_place"].get_string().value;
             }
             if (soldier["last_duty_place"] && soldier["last_duty_place"].type() == bsoncxx::type::k_string) {
@@ -84,13 +85,14 @@ public:
             if (soldier["source_fund_number"] && soldier["source_fund_number"].type() == bsoncxx::type::k_int32) {
                 source_fund_number_ = soldier["source_fund_number"].get_int32().value;
             }
-            if (soldier["source_inventory_number"] && soldier["source_inventory_number"].type() == bsoncxx::type::k_int32) {
+            if (soldier["source_inventory_number"] && soldier["source_inventory_number"].type() ==
+                bsoncxx::type::k_int32) {
                 source_inventory_number_ = soldier["source_inventory_number"].get_int32().value;
             }
             if (soldier["source_case_number"] && soldier["source_case_number"].type() == bsoncxx::type::k_int32) {
                 source_case_number_ = soldier["source_case_number"].get_int32().value;
             }
-        } catch (const std::exception& ex) {
+        } catch (const std::exception &ex) {
             std::cout << "[ERROR] Error parsing bson soldier: " << ex.what() << std::endl;
             throw;
         } catch (...) {
@@ -111,6 +113,7 @@ public:
     friend bool operator==(const SoldierEntry &l, const SoldierEntry &r);
 
 #ifdef BUILD_GOOGLE_TEST
+
 public:
 #else
 private:
@@ -130,28 +133,27 @@ private:
     std::string source_fund_number_;
     std::string source_inventory_number_;
     std::string source_case_number_;
-    std::string link_{};   // TODO: добавить в БД, если нужно
-    std::string file_{};   // TODO: добавить в БД, если нужно
+    std::string link_{}; // TODO: добавить в БД, если нужно
+    std::string file_{}; // TODO: добавить в БД, если нужно
 };
 
 namespace compare_utils {
-
-    void StrToLower(std::string& str) {
-        std::for_each(str.begin(), str.end(), [](char c){ return tolower(c); });
+    void StrToLower(std::string &str) {
+        std::for_each(str.begin(), str.end(), [](char c) { return tolower(c); });
     }
 
-    std::string StrToLower(const std::string& str) {
-        std::wstring_convert<std::codecvt_utf8<wchar_t>> conv;
+    std::string StrToLower(const std::string &str) {
+        std::wstring_convert<std::codecvt_utf8<wchar_t> > conv;
         std::wstring wide_str = conv.from_bytes(str);
 
-        std::locale loc("ru_RU.UTF-8");  // Локаль для кириллицы
-        for (wchar_t& c : wide_str) {
+        std::locale loc("ru_RU.UTF-8"); // Локаль для кириллицы
+        for (wchar_t &c: wide_str) {
             c = std::tolower(c, loc);
         }
         return conv.to_bytes(wide_str);
     }
 
-    std::string Strip(const std::string& str) {
+    std::string Strip(const std::string &str) {
         if (str.empty()) {
             return str;
         }
@@ -173,17 +175,17 @@ namespace compare_utils {
         return str.substr(start, end - start + 1);
     }
 
-    size_t utf8_strlen(const std::string& str) {
-        setlocale(LC_ALL, "en_US.utf8");  // Устанавливаем локаль для UTF-8
+    size_t utf8_strlen(const std::string &str) {
+        setlocale(LC_ALL, "en_US.utf8"); // Устанавливаем локаль для UTF-8
 
         size_t char_count = 0;
         mbstate_t state = {};
-        const char* ptr = str.c_str();
-        const char* end = ptr + str.size();
+        const char *ptr = str.c_str();
+        const char *end = ptr + str.size();
 
         while (ptr < end) {
             size_t len = mbrlen(ptr, end - ptr, &state);
-            if (len == (size_t)-1 || len == (size_t)-2) {
+            if (len == (size_t) -1 || len == (size_t) -2) {
                 // Некорректный UTF-8 символ
                 break;
             }
@@ -195,14 +197,14 @@ namespace compare_utils {
     }
 
     // ===================================================================
-    bool CompareLastName(const std::string& l, const std::string& r) {
+    bool CompareLastName(const std::string &l, const std::string &r) {
         std::string left = StrToLower(l);
         std::string right = StrToLower(r);
         if (left == "null" || right == "null") return false;
         return left == right;
     }
 
-    bool CompareFirstName(const std::string& l, const std::string& r) {
+    bool CompareFirstName(const std::string &l, const std::string &r) {
         std::string left = StrToLower(l);
         std::string right = StrToLower(r);
         if (left == "null" || right == "null") return false;
@@ -212,7 +214,7 @@ namespace compare_utils {
         return left == right;
     }
 
-    bool ComparePatronimic(const std::string& l, const std::string& r) {
+    bool ComparePatronimic(const std::string &l, const std::string &r) {
         std::string left = StrToLower(l);
         std::string right = StrToLower(r);
         if (left == "null" || right == "null") return true;
@@ -222,22 +224,140 @@ namespace compare_utils {
         return left == right;
     }
 
-    bool CompareBirthdate(const std::string& l, const std::string& r) {
-        // TODO: парсить год, месяц, день
+    struct Date {
+        int year;
+        int month;
+        int day;
+
+        Date(const std::string &str) {
+            // Разбиваем строку по точкам
+            std::vector<std::string> parts;
+            size_t start = 0;
+            size_t end = str.find_first_of(".,-/\\");
+
+            while (end != std::string::npos) {
+                parts.push_back(str.substr(start, end - start));
+                start = end + 1;
+                end = str.find_first_of(".,-/\\", start);
+            }
+            parts.push_back(str.substr(start));
+
+            // Обрабатываем разные варианты
+            if (parts.size() == 1) {
+                // "1999"
+                year = ParseNumber(parts[0]);
+                month = 0; // не указан
+                day = 0; // не указан
+            } else if (parts.size() == 3) {
+                // "__.__.1999"
+                day = parts[0].empty() ? 0 : ParseNumber(parts[0]);
+                month = parts[1].empty() ? 0 : ParseNumber(parts[1]);
+                year = ParseNumber(parts[2]);
+            } else {
+                throw std::invalid_argument("Invalid date format. Expected '__[sep=.,/\\]__[sep=.,/\\]YYYY' or 'YYYY'");
+            }
+        }
+
+    private:
+        static int ParseNumber(const std::string &s) {
+            if (s.empty()) return 0;
+            long num = std::strtol(s.c_str(), nullptr, 10);
+            return static_cast<int>(num);
+        }
+    };
+
+    bool operator==(const Date &l, const Date &r) {
+        return (l.year == r.year) &&
+               (l.month == 0 || r.month == 0 || l.month == r.month) &&
+               (l.day == 0 || r.day == 0 || l.day == r.day);
+    }
+
+    bool CompareBirthdate(const std::string &l, const std::string &r) {
+        // NULL /Возраст __.__.1999 1999
         std::string left = StrToLower(l);
         std::string right = StrToLower(r);
         if (left == "null" || right == "null") return true;
-        if (left == "/Возраст" || right == "/Возраст") return true;
-        return left == right;
+        if (left == "/возраст" || right == "/возраст") return true;
+        return Date{left} == Date{right};
     }
 
+    bool CompareLossDate(const std::string &l, const std::string &r) {
+        // NULL __.__.1999 1999
+        std::string left = StrToLower(l);
+        std::string right = StrToLower(r);
+        if (left == "null" || right == "null") return true;
+        return Date{left} == Date{right};
+    }
+
+    // Функция нормализации звания (приводит все варианты к единому представлению)
+    std::string NormalizeRank(const std::string &rank) {
+        static const std::map<std::string, std::string> normalization_map = {
+            {"красноармеец", "рядовой"},
+            {"ряд", "рядовой"},
+            {"ряд.", "рядовой"},
+            {"красноарм", "рядовой"},
+            {"красноарм.", "рядовой"},
+            {"ефр", "ефрейтор"},
+            {"ефр.", "ефрейтор"},
+            {"мл.сержант", "младшийсержант"},
+            {"мл. сержант", "младшийсержант"},
+            {"мл. серж", "младшийсержант"},
+            {"мл. серж.", "младшийсержант"},
+            {"ст.сержант", "старшийсержант"},
+            {"ст. сержант", "старшийсержант"},
+            {"ст.серж", "старшийсержант"},
+            {"ст. серж", "старшийсержант"},
+            {"ст. серж.", "старшийсержант"},
+            {"мл.лейтенант", "младшийлейтенант"},
+            {"мл. лейтенант", "младшийлейтенант"},
+            {"мл.л-т", "младшийлейтенант"},
+            {"мл. л-т", "младшийлейтенант"},
+            {"л-т", "лейтенант"},
+            {"ст.лейтенант", "старшийлейтенант"},
+            {"ст. лейтенант", "старшийлейтенант"},
+            {"ст.л-т", "старшийлейтенант"},
+            {"ст. л-т", "старшийлейтенант"},
+            {"кап.", "капитан"},
+            {"к-н", "капитан"},
+            {"м-р", "майор"},
+            {"подпол.", "подполковник"},
+            {"п/п-к", "подполковник"},
+            {"п\\п-к", "подполковник"},
+            {"п-к", "полковник"}
+        };
+
+        // Приводим к нижнему регистру и удаляем пробелы
+        std::string normalized_rank = rank;
+        normalized_rank.erase(std::remove(normalized_rank.begin(), normalized_rank.end(), ' '), normalized_rank.end());
+
+        // Ищем в карте нормализации
+        auto it = normalization_map.find(normalized_rank);
+        if (it != normalization_map.end()) {
+            return it->second;
+        }
+
+        // Если не нашли, возвращаем нормализованную версию (без пробелов, в нижнем регистре)
+        return normalized_rank;
+    }
+
+    bool CompareMilitaryRank(const std::string &l, const std::string &r) {
+        std::string left = StrToLower(l);
+        std::string right = StrToLower(r);
+
+        // Специальная обработка для "null"
+        if (left == "null" || right == "null") return true;
+
+        left = NormalizeRank(left);
+        right = NormalizeRank(right);
+        return left == right;
+    }
 }
 
 bool operator==(const SoldierEntry &l, const SoldierEntry &r) {
     return compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
-            compare_utils::CompareFirstName(compare_utils::Strip(l.first_name_), compare_utils::Strip(r.first_name_)) &&
-            compare_utils::ComparePatronimic(compare_utils::Strip(l.patronymic_), compare_utils::Strip(r.patronymic_)) &&
-            compare_utils::CompareBirthdate(l.birthdate_, r.birthdate_);  // TODO: пропускать при false
+           compare_utils::CompareFirstName(compare_utils::Strip(l.first_name_), compare_utils::Strip(r.first_name_)) &&
+           compare_utils::ComparePatronimic(compare_utils::Strip(l.patronymic_), compare_utils::Strip(r.patronymic_)) &&
+           compare_utils::CompareBirthdate(l.birthdate_, r.birthdate_); // TODO: пропускать при false
 }
 
 #endif //SOLDIERENTRY_H

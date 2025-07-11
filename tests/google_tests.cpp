@@ -173,3 +173,223 @@ TEST(CompareFIO, Patronimic) {
         EXPECT_TRUE(compare_utils::ComparePatronimic(compare_utils::Strip("Null. !  "), "Яковлевич"));
     }
 }
+
+TEST(CompareBirthdate, DateCtor) {
+    {
+        compare_utils::Date date{"10.10.1900"};
+        EXPECT_EQ(date.day, 10);
+        EXPECT_EQ(date.month, 10);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"10.10.190"};
+        EXPECT_EQ(date.day, 10);
+        EXPECT_EQ(date.month, 10);
+        EXPECT_EQ(date.year, 190);
+    }
+    {
+        compare_utils::Date date{"10.1.1900"};
+        EXPECT_EQ(date.day, 10);
+        EXPECT_EQ(date.month, 1);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"1.10.1900"};
+        EXPECT_EQ(date.day, 1);
+        EXPECT_EQ(date.month, 10);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"01.10.1900"};
+        EXPECT_EQ(date.day, 1);
+        EXPECT_EQ(date.month, 10);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"10.01.1900"};
+        EXPECT_EQ(date.day, 10);
+        EXPECT_EQ(date.month, 1);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"10.__.1900"};
+        EXPECT_EQ(date.day, 10);
+        EXPECT_EQ(date.month, 0);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"__.10.1900"};
+        EXPECT_EQ(date.day, 0);
+        EXPECT_EQ(date.month, 10);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"__.__.1900"};
+        EXPECT_EQ(date.day, 0);
+        EXPECT_EQ(date.month, 0);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"1900"};
+        EXPECT_EQ(date.day, 0);
+        EXPECT_EQ(date.month, 0);
+        EXPECT_EQ(date.year, 1900);
+    }
+
+    // Другие странные ситуации
+    {
+        compare_utils::Date date{"__/__/1900"};
+        EXPECT_EQ(date.day, 0);
+        EXPECT_EQ(date.month, 0);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"__-__-1900"};
+        EXPECT_EQ(date.day, 0);
+        EXPECT_EQ(date.month, 0);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"__-__/1900"};
+        EXPECT_EQ(date.day, 0);
+        EXPECT_EQ(date.month, 0);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"10-__/1900"};
+        EXPECT_EQ(date.day, 10);
+        EXPECT_EQ(date.month, 0);
+        EXPECT_EQ(date.year, 1900);
+    }
+    {
+        compare_utils::Date date{"__-10/1900"};
+        EXPECT_EQ(date.day, 0);
+        EXPECT_EQ(date.month, 10);
+        EXPECT_EQ(date.year, 1900);
+    }
+}
+
+TEST(CompareBirthdate, DateComparator) {
+    {
+        compare_utils::Date date1{"10.10.1900"};
+        compare_utils::Date date2{"10.10.1900"};
+        EXPECT_EQ(date1, date2);
+    }
+    {
+        compare_utils::Date date1{"__.__.1900"};
+        compare_utils::Date date2{"__.__.1900"};
+        EXPECT_EQ(date1, date2);
+    }
+    {
+        compare_utils::Date date1{"1900"};
+        compare_utils::Date date2{"1900"};
+        EXPECT_EQ(date1, date2);
+    }
+    {
+        compare_utils::Date date1{"__.__.1900"};
+        compare_utils::Date date2{"1900"};
+        EXPECT_EQ(date1, date2);
+    }
+    {
+        compare_utils::Date date1{"__.__.1900"};
+        compare_utils::Date date2{"11.10.1900"};
+        EXPECT_EQ(date1, date2);
+    }
+    {
+        compare_utils::Date date1{"10.__.1900"};
+        compare_utils::Date date2{"10.10.1900"};
+        EXPECT_EQ(date1, date2);
+    }
+
+
+    {
+        compare_utils::Date date1{"10.10.1900"};
+        compare_utils::Date date2{"11.10.1900"};
+        EXPECT_NE(date1, date2);
+    }
+    {
+        compare_utils::Date date1{"10.10.1900"};
+        compare_utils::Date date2{"10.11.1900"};
+        EXPECT_NE(date1, date2);
+    }
+    {
+        compare_utils::Date date1{"10.10.1900"};
+        compare_utils::Date date2{"10.10.1901"};
+        EXPECT_NE(date1, date2);
+    }
+    {
+        compare_utils::Date date1{"1900"};
+        compare_utils::Date date2{"1901"};
+        EXPECT_NE(date1, date2);
+    }
+}
+
+TEST(CompareBirthdate, BirthdateComparator) {
+    EXPECT_TRUE(compare_utils::CompareBirthdate("10.10.1900", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("10.__.1900", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("__.10.1900", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("__.__.1900", "__.__.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("1900", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("NULL", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("/Возраст", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("NULL", "NULL"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("/Возраст", "/Возраст"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("NULL", "1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("/Возраст", "1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("NULL", "__.__.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("/Возраст", "__.__.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("10-10/1900", "10,10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("10-__0/1900", "__.0/1900"));
+
+    EXPECT_FALSE(compare_utils::CompareBirthdate("9.10.1900", "10.10.1900"));
+    EXPECT_FALSE(compare_utils::CompareBirthdate("09.10.1900", "10.10.1900"));
+}
+
+
+TEST(CompareLossDate, CompareLossDate) {
+    EXPECT_TRUE(compare_utils::CompareBirthdate("10.10.1900", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("10.__.1900", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("__.10.1900", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("__.__.1900", "__.__.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("1900", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("NULL", "10.10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("NULL", "NULL"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("NULL", "1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("NULL", "__.__.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("10-10/1900", "10,10.1900"));
+    EXPECT_TRUE(compare_utils::CompareBirthdate("10-__0/1900", "__.0/1900"));
+
+    EXPECT_FALSE(compare_utils::CompareBirthdate("9.10.1900", "10.10.1900"));
+    EXPECT_FALSE(compare_utils::CompareBirthdate("09.10.1900", "10.10.1900"));
+}
+
+TEST(CompareMilitaryRank, CompareMilitaryRank) {
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("рядовой", "рядовой"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ряд", "рядовой"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ряд.", "рядовой"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("рядовой", "красноармеец"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ефрейтор", "Ефрейтор"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ефр", "Ефрейтор"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ефр.", "Ефрейтор"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ефрейтор", "Ефрейтор"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("младший сержант", "младший сержант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("мл.сержант", "младший сержант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("мл. сержант", "младший сержант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("мл.   сержант", "младший сержант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("мл.лейтенант", "младший лейтенант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("мл. лейтенант", "младший лейтенант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("мл.   лейтенант", "младший лейтенант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ст.лейтенант", "старший лейтенант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ст. лейтенант", "старший лейтенант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("ст.   лейтенант", "старший лейтенант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("лейтенант", "лейтенант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("л-т", "лейтенант"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("к-н", "капитан"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("капитан", "капитан"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("майор", "Майор"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("м-Р", "Майор"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("подполковник", "Подполковник"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("п/п-к", "подполковник"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("полковник", "Полковник"));
+    EXPECT_TRUE(compare_utils::CompareMilitaryRank("п-к", "полковник"));
+}
