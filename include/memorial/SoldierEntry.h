@@ -4,6 +4,7 @@
 #include <string>
 #include <locale>
 #include <codecvt>
+#include <numeric>
 #include <bsoncxx/builder/basic/document.hpp>
 
 class SoldierEntry {
@@ -139,7 +140,14 @@ private:
 
 namespace compare_utils {
     void StrToLower(std::string &str) {
-        std::for_each(str.begin(), str.end(), [](char c) { return tolower(c); });
+        std::wstring_convert<std::codecvt_utf8<wchar_t> > conv;
+        std::wstring wide_str = conv.from_bytes(str);
+
+        std::locale loc("ru_RU.UTF-8"); // Локаль для кириллицы
+        for (wchar_t &c: wide_str) {
+            c = std::tolower(c, loc);
+        }
+        str = conv.to_bytes(wide_str);
     }
 
     std::string StrToLower(const std::string &str) {
@@ -175,7 +183,30 @@ namespace compare_utils {
         return str.substr(start, end - start + 1);
     }
 
-    size_t utf8_strlen(const std::string &str) {
+    // TODO: покрытие unit-тестами
+    void StripByUnderLine(std::string &str) {
+        if (str.empty()) {
+            return;
+        }
+
+        size_t start = 0;
+        while (start < str.size() && (str[start] == '_')) {
+            ++start;
+        }
+
+        if (start == str.size()) {
+            return;
+        }
+
+        size_t end = str.size() - 1;
+        while (end > start && (str[start] == '_')) {
+            --end;
+        }
+
+        str = str.substr(start, end - start + 1);
+    }
+
+    size_t UTF8_Strlen(const std::string &str) {
         setlocale(LC_ALL, "en_US.utf8"); // Устанавливаем локаль для UTF-8
 
         size_t char_count = 0;
@@ -196,6 +227,38 @@ namespace compare_utils {
         return char_count;
     }
 
+    // TODO: покрытие unit-тестами
+    std::string RemoveSpaces(const std::string &str) {
+        std::string str_to_remove_spaces{str};
+        auto new_end = str_to_remove_spaces.erase(
+            std::remove(str_to_remove_spaces.begin(), str_to_remove_spaces.end(), ' '), str_to_remove_spaces.end());
+        return {str_to_remove_spaces.begin(), new_end};
+    }
+
+    // TODO: покрытие unit-тестами
+    std::string ReplaceSpaces(const std::string &str, char c) {
+        std::string str_to_replace_spaces{str};
+        std::replace_if(str_to_replace_spaces.begin(), str_to_replace_spaces.end(), [](char c) {
+            return c == ' ';
+        }, c);
+        return str_to_replace_spaces;
+    }
+
+    // TODO: покрытие unit-тестами
+    std::vector<std::string> Split(const std::string &str, const std::string &delimeters) {
+        std::vector<std::string> parts;
+        size_t start = 0;
+        size_t end = str.find_first_of(delimeters);
+
+        while (end != std::string::npos) {
+            parts.push_back(str.substr(start, end - start));
+            start = end + 1;
+            end = str.find_first_of(delimeters, start);
+        }
+        parts.push_back(str.substr(start));
+        return parts;
+    }
+
     // ===================================================================
     bool CompareLastName(const std::string &l, const std::string &r) {
         std::string left = StrToLower(l);
@@ -208,7 +271,7 @@ namespace compare_utils {
         std::string left = StrToLower(l);
         std::string right = StrToLower(r);
         if (left == "null" || right == "null") return false;
-        if (utf8_strlen(left) == 1 || utf8_strlen(right) == 1) {
+        if (UTF8_Strlen(left) == 1 || UTF8_Strlen(right) == 1) {
             return left[0] == right[0];
         }
         return left == right;
@@ -218,7 +281,7 @@ namespace compare_utils {
         std::string left = StrToLower(l);
         std::string right = StrToLower(r);
         if (left == "null" || right == "null") return true;
-        if (utf8_strlen(left) == 1 || utf8_strlen(right) == 1) {
+        if (UTF8_Strlen(left) == 1 || UTF8_Strlen(right) == 1) {
             return left[0] == right[0];
         }
         return left == right;
@@ -231,16 +294,7 @@ namespace compare_utils {
 
         Date(const std::string &str) {
             // Разбиваем строку по точкам
-            std::vector<std::string> parts;
-            size_t start = 0;
-            size_t end = str.find_first_of(".,-/\\");
-
-            while (end != std::string::npos) {
-                parts.push_back(str.substr(start, end - start));
-                start = end + 1;
-                end = str.find_first_of(".,-/\\", start);
-            }
-            parts.push_back(str.substr(start));
+            std::vector<std::string> parts = Split(str, ".,-/\\");
 
             // Обрабатываем разные варианты
             if (parts.size() == 1) {
@@ -289,6 +343,7 @@ namespace compare_utils {
         return Date{left} == Date{right};
     }
 
+    // TODO: покрытие unit-тестами
     // Функция нормализации звания (приводит все варианты к единому представлению)
     std::string NormalizeRank(const std::string &rank) {
         static const std::map<std::string, std::string> normalization_map = {
@@ -350,6 +405,190 @@ namespace compare_utils {
         left = NormalizeRank(left);
         right = NormalizeRank(right);
         return left == right;
+    }
+
+    static const std::map<std::string, std::string> normalization_map_geo = {
+        {"обл.", "область"},
+        {"обл", "область"},
+        {"область", "область"},
+
+        {"край", "край"},
+        {"край.", "край"},
+        {"кр", "край"},
+        {"кр.", "край"},
+
+        {"республика.", "республика"},
+        {"республика", "республика"},
+        {"р-ка.", "республика"},
+        {"р-ка", "республика"},
+        {"респ.", "республика"},
+        {"респ", "республика"},
+
+        {"район.", "район"},
+        {"район", "район"},
+        {"р-н.", "район"},
+        {"р-н", "район"},
+
+        {"сельсовет.", "сельсовет"},
+        {"сельсовет", "сельсовет"},
+        {"с/с.", "сельсовет"},
+        {"с/с", "сельсовет"},
+
+        {"деревня.", "деревня"},
+        {"деревня", "деревня"},
+        {"д-ня.", "деревня"},
+        {"д-ня", "деревня"},
+        {"дер.", "деревня"},
+        {"дер", "деревня"},
+        {"д.", "деревня"},
+
+        {"город.", "город"},
+        {"город", "город"},
+        {"г-д.", "город"},
+        {"г-д", "город"},
+        {"г.", "город"},
+
+        {"село.", "село"},
+        {"село", "село"},
+        {"с.", "село"},
+
+        {"поселок.", "поселок"},
+        {"поселок", "поселок"},
+        {"п-к.", "поселок"},
+        {"п-к", "поселок"},
+        {"пос.", "поселок"},
+        {"пос", "поселок"},
+
+        {"хутор.", "хутор"},
+        {"хутор", "хутор"},
+        {"хут.", "хутор"},
+        {"хут", "хутор"},
+        {"х-р.", "хутор"},
+        {"х-р", "хутор"},
+
+        {"колхоз.", "колхоз"},
+        {"колхоз", "колхоз"},
+        {"кол.", "колхоз"},
+        {"кол", "колхоз"},
+        {"к-з.", "колхоз"},
+        {"к-з", "колхоз"},
+
+        {"кишлак.", "кишлак"},
+        {"кишлак", "кишлак"},
+        {"киш-к.", "кишлак"},
+        {"киш-к", "кишлак"},
+        {"киш.", "кишлак"},
+        {"киш", "кишлак"},
+
+        {"улица.", "улица"},
+        {"улица", "улица"},
+        {"у-ца.", "улица"},
+        {"у-ца", "улица"},
+        {"ул.", "улица"},
+        {"уд", "улица"},
+
+        {"шоссе.", "шоссе"},
+        {"шоссе", "шоссе"},
+        {"шос.", "шоссе"},
+        {"шос", "шоссе"},
+
+        {"переулок.", "переулок"},
+        {"переулок", "переулок"},
+        {"пер.", "переулок"},
+        {"пер", "переулок"},
+        {"пер-к.", "переулок"},
+        {"пер-к", "переулок"},
+
+        {"проезд.", "проезд"},
+        {"проезд", "проезд"},
+        {"п-д.", "проезд"},
+        {"п-д", "проезд"},
+
+        {"проспект.", "проспект"},
+        {"проспект", "проспект"},
+        {"пр-т.", "проспект"},
+        {"пр-т", "проспект"},
+        {"просп.", "проспект"},
+        {"просп", "проспект"},
+
+        {"аллея.", "аллея"},
+        {"аллея", "аллея"},
+        {"ал-я.", "аллея"},
+        {"ал-я", "аллея"},
+        {"ал.", "аллея"},
+        {"ал", "аллея"},
+
+        {"квартира.", "квартира"},
+        {"квартира", "квартира"},
+        {"кв.", "квартира"},
+        {"кв", "квартира"}
+    };
+
+    // TODO: покрытие unit-тестами
+    // Функция нормализации сокращений географических обозначений (приводит все варианты к единому представлению)
+    std::string NormalizeGeo(const std::string &place) {
+        // Ищем в карте нормализации
+        auto it = normalization_map_geo.find(place);
+        if (it != normalization_map_geo.end()) {
+            return it->second;
+        }
+
+        // Если не нашли, возвращаем нормализованную версию (без пробелов, в нижнем регистре)
+        return place;
+    }
+
+    std::pair<std::string, std::string> FindGeoAbbr(std::vector<std::string> geo_elems) {
+        for (auto [abbr, full_place]: normalization_map_geo) {
+            auto it = std::find_if(geo_elems.begin(), geo_elems.end(), [abbr](const std::string &elem) {
+                return abbr == elem;
+            });
+            if (it != geo_elems.end()) {
+                // нашли аббревиатуру
+                return {abbr, full_place};
+            }
+        }
+        return {};
+    }
+
+    struct BurialPlace {
+        std::unordered_map<std::string, std::string> places_;
+
+        // TODO: покрытие unit-тестами [TOP-1!!]
+        BurialPlace(const std::string &burial_place) {
+            std::string place_string{Strip(burial_place)};
+            StrToLower(place_string);
+            place_string = ReplaceSpaces(place_string, '_');
+            std::vector<std::string> places = Split(place_string, ",");
+
+            // удаляем _ в начале и в конце кусочков местности
+            std::for_each(places.begin(), places.end(), StripByUnderLine);
+
+            for (std::string &place: places) {
+                std::vector<std::string> geo_elems = Split(place, "_");
+                std::pair abbr_pair = FindGeoAbbr(geo_elems);
+                if (!abbr_pair.first.empty()) {
+                    geo_elems.erase(std::remove_if(geo_elems.begin(), geo_elems.end(),
+                                                   [abbr_pair](const std::string &geo_elem) {
+                                                       return abbr_pair.first == geo_elem;
+                                                   }), geo_elems.end());
+
+                    std::string geo_full_string = std::accumulate(
+                        geo_elems.begin(),
+                        geo_elems.end(),
+                        std::string{},
+                        [](std::string l, const std::string &r) {
+                            return l.empty() ? r : std::move(l) + " " + r;
+                        }
+                    );
+                    // ключом будет полное название геометки
+                    places_[abbr_pair.second] = Strip(geo_full_string);
+                }
+            }
+        }
+    };
+
+    bool operator==(const BurialPlace &l, const BurialPlace &r) {
+        return l.places_ == r.places_;
     }
 }
 

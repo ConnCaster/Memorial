@@ -174,62 +174,52 @@ TEST(CompareFIO, Patronimic) {
     }
 }
 
-TEST(CompareBirthdate, DateCtor) {
-    {
+TEST(CompareBirthdate, DateCtor) { {
         compare_utils::Date date{"10.10.1900"};
         EXPECT_EQ(date.day, 10);
         EXPECT_EQ(date.month, 10);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"10.10.190"};
         EXPECT_EQ(date.day, 10);
         EXPECT_EQ(date.month, 10);
         EXPECT_EQ(date.year, 190);
-    }
-    {
+    } {
         compare_utils::Date date{"10.1.1900"};
         EXPECT_EQ(date.day, 10);
         EXPECT_EQ(date.month, 1);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"1.10.1900"};
         EXPECT_EQ(date.day, 1);
         EXPECT_EQ(date.month, 10);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"01.10.1900"};
         EXPECT_EQ(date.day, 1);
         EXPECT_EQ(date.month, 10);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"10.01.1900"};
         EXPECT_EQ(date.day, 10);
         EXPECT_EQ(date.month, 1);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"10.__.1900"};
         EXPECT_EQ(date.day, 10);
         EXPECT_EQ(date.month, 0);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"__.10.1900"};
         EXPECT_EQ(date.day, 0);
         EXPECT_EQ(date.month, 10);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"__.__.1900"};
         EXPECT_EQ(date.day, 0);
         EXPECT_EQ(date.month, 0);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"1900"};
         EXPECT_EQ(date.day, 0);
         EXPECT_EQ(date.month, 0);
@@ -242,26 +232,22 @@ TEST(CompareBirthdate, DateCtor) {
         EXPECT_EQ(date.day, 0);
         EXPECT_EQ(date.month, 0);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"__-__-1900"};
         EXPECT_EQ(date.day, 0);
         EXPECT_EQ(date.month, 0);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"__-__/1900"};
         EXPECT_EQ(date.day, 0);
         EXPECT_EQ(date.month, 0);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"10-__/1900"};
         EXPECT_EQ(date.day, 10);
         EXPECT_EQ(date.month, 0);
         EXPECT_EQ(date.year, 1900);
-    }
-    {
+    } {
         compare_utils::Date date{"__-10/1900"};
         EXPECT_EQ(date.day, 0);
         EXPECT_EQ(date.month, 10);
@@ -269,55 +255,43 @@ TEST(CompareBirthdate, DateCtor) {
     }
 }
 
-TEST(CompareBirthdate, DateComparator) {
-    {
+TEST(CompareBirthdate, DateComparator) { {
         compare_utils::Date date1{"10.10.1900"};
         compare_utils::Date date2{"10.10.1900"};
         EXPECT_EQ(date1, date2);
-    }
-    {
+    } {
         compare_utils::Date date1{"__.__.1900"};
         compare_utils::Date date2{"__.__.1900"};
         EXPECT_EQ(date1, date2);
-    }
-    {
+    } {
         compare_utils::Date date1{"1900"};
         compare_utils::Date date2{"1900"};
         EXPECT_EQ(date1, date2);
-    }
-    {
+    } {
         compare_utils::Date date1{"__.__.1900"};
         compare_utils::Date date2{"1900"};
         EXPECT_EQ(date1, date2);
-    }
-    {
+    } {
         compare_utils::Date date1{"__.__.1900"};
         compare_utils::Date date2{"11.10.1900"};
         EXPECT_EQ(date1, date2);
-    }
-    {
+    } {
         compare_utils::Date date1{"10.__.1900"};
         compare_utils::Date date2{"10.10.1900"};
         EXPECT_EQ(date1, date2);
-    }
-
-
-    {
+    } {
         compare_utils::Date date1{"10.10.1900"};
         compare_utils::Date date2{"11.10.1900"};
         EXPECT_NE(date1, date2);
-    }
-    {
+    } {
         compare_utils::Date date1{"10.10.1900"};
         compare_utils::Date date2{"10.11.1900"};
         EXPECT_NE(date1, date2);
-    }
-    {
+    } {
         compare_utils::Date date1{"10.10.1900"};
         compare_utils::Date date2{"10.10.1901"};
         EXPECT_NE(date1, date2);
-    }
-    {
+    } {
         compare_utils::Date date1{"1900"};
         compare_utils::Date date2{"1901"};
         EXPECT_NE(date1, date2);
@@ -392,4 +366,30 @@ TEST(CompareMilitaryRank, CompareMilitaryRank) {
     EXPECT_TRUE(compare_utils::CompareMilitaryRank("п/п-к", "подполковник"));
     EXPECT_TRUE(compare_utils::CompareMilitaryRank("полковник", "Полковник"));
     EXPECT_TRUE(compare_utils::CompareMilitaryRank("п-к", "полковник"));
+}
+
+
+TEST(CompareBurialPlace, BurialPlaceCtor) {
+    compare_utils::BurialPlace bp = compare_utils::BurialPlace(
+        "Орловская обл.,  Залегощенский р-н, Н.-Залегощенский с/с, д. Гвоздяное");
+    std::unordered_map<std::string, std::string> places = {
+        {"область", "орловская"},
+        {"район", "залегощенский"},
+        {"сельсовет", "н.-залегощенский"},
+        {"деревня", "гвоздяное"},
+    };
+    compare_utils::BurialPlace bp2 = compare_utils::BurialPlace(
+    "Орловская обл.,     Залегощенский    Р-н, Н.-Залегощенский с/с, д. Гвоздяное");
+    EXPECT_EQ(bp.places_, places);
+    EXPECT_EQ(bp, bp2);
+
+    bp = compare_utils::BurialPlace(
+        "г. Москва, шоссе Ногинское, д. 4, кв. 6");
+    places = {
+        {"город", "москва"},
+        {"шоссе", "ногинское"},
+        {"деревня", "4"},
+        {"квартира", "6"},
+    };
+    EXPECT_EQ(bp.places_, places);
 }
