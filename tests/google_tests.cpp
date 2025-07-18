@@ -393,3 +393,127 @@ TEST(CompareBurialPlace, BurialPlaceCtor) {
     };
     EXPECT_EQ(bp.places_, places);
 }
+
+// =================== UNIT-ТЕСТЫ ДЛЯ УТИЛИТ ===================
+TEST(CompareUtils, StripByUnderLine_Orlovskaya) {
+    std::string s1 = "___д. Павлово___";
+    compare_utils::StripByUnderLine(s1);
+    EXPECT_EQ(s1, "д. Павлово");
+    std::string s2 = "______";
+    compare_utils::StripByUnderLine(s2);
+    EXPECT_EQ(s2, "");
+    std::string s3 = "_г. Орёл_";
+    compare_utils::StripByUnderLine(s3);
+    EXPECT_EQ(s3, "г. Орёл");
+    std::string s4 = "";
+    compare_utils::StripByUnderLine(s4);
+    EXPECT_EQ(s4, "");
+}
+
+TEST(CompareUtils, RemoveSpaces_Orlovskaya) {
+    EXPECT_EQ(compare_utils::RemoveSpaces("Орловская обл., Залегощенский р-н, д. Павлово, братская могила"), "Орловскаяобл.,Залегощенскийр-н,д.Павлово,братскаямогила");
+    EXPECT_EQ(compare_utils::RemoveSpaces("   "), "");
+    EXPECT_EQ(compare_utils::RemoveSpaces("д. Ивановка"), "д.Ивановка");
+    EXPECT_EQ(compare_utils::RemoveSpaces("Орловская обл. Мценский р-н"), "Орловскаяобл.Мценскийр-н");
+}
+
+TEST(CompareUtils, ReplaceSpaces_Orlovskaya) {
+    EXPECT_EQ(compare_utils::ReplaceSpaces("Орловская обл., г. Орёл", '_'), "Орловская_обл.,_г._Орёл");
+    EXPECT_EQ(compare_utils::ReplaceSpaces(" ", '_'), "_");
+    EXPECT_EQ(compare_utils::ReplaceSpaces("д. Ивановка", '-'), "д.-Ивановка");
+    EXPECT_EQ(compare_utils::ReplaceSpaces("Орловская обл. Залегощенский р-н", '*'), "Орловская*обл.*Залегощенский*р-н");
+}
+
+TEST(CompareUtils, Split_Orlovskaya) {
+    std::vector<std::string> res1 = compare_utils::Split("Орловская обл., Залегощенский р-н, д. Павлово, братская могила", ",");
+    ASSERT_EQ(res1.size(), 4);
+    EXPECT_EQ(res1[0], "Орловская обл.");
+    EXPECT_EQ(res1[1], " Залегощенский р-н");
+    EXPECT_EQ(res1[2], " д. Павлово");
+    EXPECT_EQ(res1[3], " братская могила");
+    std::vector<std::string> res2 = compare_utils::Split("Орловская_обл._Залегощенский_р-н", "_");
+    ASSERT_EQ(res2.size(), 4);
+    EXPECT_EQ(res2[0], "Орловская");
+    EXPECT_EQ(res2[1], "обл.");
+    EXPECT_EQ(res2[2], "Залегощенский");
+    EXPECT_EQ(res2[3], "р-н");
+    std::vector<std::string> res3 = compare_utils::Split("", ",");
+    ASSERT_EQ(res3.size(), 1);
+    EXPECT_EQ(res3[0], "");
+}
+
+TEST(CompareUtils, NormalizeGeo_Orlovskaya) {
+    EXPECT_EQ(compare_utils::NormalizeGeo("обл."), "область");
+    EXPECT_EQ(compare_utils::NormalizeGeo("р-н"), "район");
+    EXPECT_EQ(compare_utils::NormalizeGeo("г."), "город");
+    EXPECT_EQ(compare_utils::NormalizeGeo("ул."), "улица");
+    EXPECT_EQ(compare_utils::NormalizeGeo("кв."), "квартира");
+    EXPECT_EQ(compare_utils::NormalizeGeo("Орловская"), "Орловская"); // несуществующая аббревиатура
+    EXPECT_EQ(compare_utils::NormalizeGeo(" "), " ");
+}
+
+TEST(CompareUtils, BurialPlace_OrlovskayaOblast) {
+    // Случай: область, район, деревня, братская могила
+    compare_utils::BurialPlace bp1("Орловская обл., Залегощенский р-н, д. Павлово, братская могила");
+    EXPECT_TRUE(bp1.places_.count("область"));
+    EXPECT_EQ(bp1.places_.at("область"), "Орловская");
+    EXPECT_TRUE(bp1.places_.count("район"));
+    EXPECT_EQ(bp1.places_.at("район"), "Залегощенский");
+    EXPECT_TRUE(bp1.places_.count("деревня"));
+    EXPECT_EQ(bp1.places_.at("деревня"), "Павлово");
+    // Случай: только область и город
+    compare_utils::BurialPlace bp2("Орловская обл., г. Орёл");
+    EXPECT_TRUE(bp2.places_.count("область"));
+    EXPECT_EQ(bp2.places_.at("область"), "Орловская");
+    EXPECT_TRUE(bp2.places_.count("город"));
+    EXPECT_EQ(bp2.places_.at("город"), "Орёл");
+    // Случай: область, район, село, улица
+    compare_utils::BurialPlace bp3("Орловская обл., Мценский р-н, с. Спасское, ул. Центральная");
+    EXPECT_TRUE(bp3.places_.count("область"));
+    EXPECT_EQ(bp3.places_.at("область"), "Орловская");
+    EXPECT_TRUE(bp3.places_.count("район"));
+    EXPECT_EQ(bp3.places_.at("район"), "Мценский");
+    EXPECT_TRUE(bp3.places_.count("село"));
+    EXPECT_EQ(bp3.places_.at("село"), "Спасское");
+    EXPECT_TRUE(bp3.places_.count("улица"));
+    EXPECT_EQ(bp3.places_.at("улица"), "Центральная");
+    // Случай: область, посёлок, улица, дом, квартира
+    compare_utils::BurialPlace bp4("Орловская обл., пос. Нарышкино, ул. Лесная, д. 10, кв. 5");
+    EXPECT_TRUE(bp4.places_.count("область"));
+    EXPECT_EQ(bp4.places_.at("область"), "Орловская");
+    EXPECT_TRUE(bp4.places_.count("поселок"));
+    EXPECT_EQ(bp4.places_.at("поселок"), "Нарышкино");
+    // Случай: область, город, кладбище
+    compare_utils::BurialPlace bp5("Орловская обл., г. Орёл, Новое кладбище, уч. 3, могила 15");
+    EXPECT_TRUE(bp5.places_.count("область"));
+    EXPECT_EQ(bp5.places_.at("область"), "Орловская");
+    EXPECT_TRUE(bp5.places_.count("город"));
+    EXPECT_EQ(bp5.places_.at("город"), "Орёл");
+    // Случай: только область
+    compare_utils::BurialPlace bp6("Орловская обл.");
+    EXPECT_TRUE(bp6.places_.count("область"));
+    EXPECT_EQ(bp6.places_.at("область"), "Орловская");
+    // Случай: область, район, деревня с подчёркиваниями
+    compare_utils::BurialPlace bp7("Орловская_обл.,_Залегощенский_р-н,___д._Павлово___");
+    EXPECT_TRUE(bp7.places_.count("область"));
+    EXPECT_EQ(bp7.places_.at("область"), "Орловская");
+    EXPECT_TRUE(bp7.places_.count("район"));
+    EXPECT_EQ(bp7.places_.at("район"), "Залегощенский");
+    EXPECT_TRUE(bp7.places_.count("деревня"));
+    EXPECT_EQ(bp7.places_.at("деревня"), "Павлово");
+    // Случай: область, район, деревня, улица с ошибкой в аббревиатуре
+    compare_utils::BurialPlace bp8("Орловская обл., Залегощенский р-н, дд. Павлово, ул. Лесная");
+    EXPECT_TRUE(bp8.places_.count("область"));
+    EXPECT_EQ(bp8.places_.at("область"), "Орловская");
+    EXPECT_TRUE(bp8.places_.count("район"));
+    EXPECT_EQ(bp8.places_.at("район"), "Залегощенский");
+    EXPECT_FALSE(bp8.places_.count("деревня")); // dд. нераспознано
+    // Случай: необычный разделитель
+    compare_utils::BurialPlace bp9("Орловская обл.; г. Мценск; ул. Ленина");
+    EXPECT_TRUE(bp9.places_.count("область"));
+    EXPECT_EQ(bp9.places_.at("область"), "Орловская обл.; г. Мценск; ул. Ленина"); // если не разделилось, вся строка
+    // Случай: пустая строка
+    compare_utils::BurialPlace bp10("");
+    EXPECT_TRUE(bp10.places_.empty());
+}
+// =============================================================
