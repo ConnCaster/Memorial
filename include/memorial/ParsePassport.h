@@ -34,7 +34,7 @@ public:
             opts.batch_size(10);
             auto cursor = vedomosti_collection_.find({}, opts);
 
-            XLWorksheet passport_worksheet = xlsx_file.workbook().worksheet("Sheet1");
+            XLWorksheet passport_worksheet = xlsx_file.workbook().worksheet("Лист1");
 
             VedomostSearcher vedomost_searcher{passport_worksheet, std::move(cursor)};
             Vedomost found_vedomost = vedomost_searcher.Search();

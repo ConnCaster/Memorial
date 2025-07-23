@@ -26,6 +26,7 @@ public:
             int soldiers_found = 0;
             std::vector<SoldierEntry> vedomost_soldiers = vdmst.GetSoldierd();
             for (const SoldierEntry& vedomost_soldier : vedomost_soldiers) {
+                checked_soldiers_++;
                 for (auto& line : passport_worksheet_.rows()) {
                     if (line.findCell(1).value().getString() == "Фамилия") continue;
                     SoldierEntry passport_soldier{
@@ -57,12 +58,15 @@ public:
                 }
             }
         }
+        std::cout << "[Checked Soldiers from DB] " << checked_soldiers_ << std::endl;
         return max_soldiers_vedomost; // возврат названия подходящей ведомости
     }
 
 private:
     XLWorksheet passport_worksheet_;
     mongocxx::cursor cursor_;
+
+    unsigned int checked_soldiers_{0};
 };
 
 
