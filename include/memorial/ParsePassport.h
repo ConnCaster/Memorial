@@ -34,7 +34,24 @@ public:
             opts.batch_size(10);
             auto cursor = vedomosti_collection_.find({}, opts);
 
-            XLWorksheet passport_worksheet = xlsx_file.workbook().worksheet("Лист1");
+            XLWorksheet passport_worksheet{};  // = xlsx_file.workbook().worksheet("Лист1");
+
+            auto workbook = xlsx_file.workbook();
+            auto worksheetNames = workbook.worksheetNames();
+
+            bool found = false;
+            for (const auto& name : worksheetNames) {
+                if (name == "Лист1" || name == "Sheet1") {
+                    passport_worksheet = workbook.worksheet(name);
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                xlsx_file.close();
+                throw std::runtime_error("Valid worksheet name is not found in Passport");
+            }
 
             VedomostSearcher vedomost_searcher{passport_worksheet, std::move(cursor)};
             Vedomost found_vedomost = vedomost_searcher.Search();

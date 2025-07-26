@@ -26,11 +26,6 @@ int main(int argc, char* argv[]) {
     if (result.count("help")) {
         std::cout << options.help() << std::endl;
     }
-    if (!result.count("passport")) {
-        std::cerr << "Ошибка: необходимо указать путь к файлу с паспортом с помощью параметра -p или --passport" << std::endl;
-        std::cout << options.help() << std::endl;
-        return 1;
-    }
 
     const mongocxx::uri uri = mongocxx::uri{"mongodb://admin:my_password@localhost:27017/memorial?authSource=admin"};
     if (result.count("upload")) {
@@ -46,6 +41,12 @@ int main(int argc, char* argv[]) {
             std::cerr << "Ошибка при создании БД или коллекции в БД: " << e.what() << std::endl;
         }
         return 0;
+    }
+
+    if (!result.count("passport")) {
+        std::cerr << "Ошибка: необходимо указать путь к файлу с паспортом с помощью параметра -p или --passport" << std::endl;
+        std::cout << options.help() << std::endl;
+        return 1;
     }
 
     std::string passport_path = result["passport"].as<std::string>();
@@ -71,13 +72,3 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
 }
-
-/*
- * TODO:
- * 1. Механизм заливки в БД новых ведомостей
- * 2. Механизм перечитывания директории с паспортами (
- *          аргументом программе дается путь к директории с паспортами, а мы получаем из нее имена всех файлов паспортов
- *          и используем их для наших поисков)
- * 3.
- *
- */

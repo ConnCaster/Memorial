@@ -45,7 +45,25 @@ public:
                     if (!xlsx_file.isOpen()) {
                         std::cout << "[Error] Error open vedomost file " << vedomost_path << ". Continue..." << std::endl;
                     }
-                    XLWorksheet vedomost_worksheet = xlsx_file.workbook().worksheet("Лист1");
+                    XLWorksheet vedomost_worksheet{};  //= xlsx_file.workbook().worksheet("Лист1");
+
+                    auto workbook = xlsx_file.workbook();
+                    auto worksheetNames = workbook.worksheetNames();
+
+                    bool found = false;
+                    for (const auto& name : worksheetNames) {
+                        if (name == "Лист1" || name == "Sheet1") {
+                            vedomost_worksheet = workbook.worksheet(name);
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if (!found) {
+                        xlsx_file.close();
+                        throw std::runtime_error("Valid worksheet name is not found in Vedomost: " + vedomost_path.path().string());
+                    }
+
                     bsoncxx::builder::basic::document doc = CreateMongoDocumentFromVedomost(vedomost_worksheet);
                     if (!InsertVedomost(doc)) {
                         continue;
@@ -104,13 +122,33 @@ public:
         int line_counter{0};
         for (auto& line : vedomost_worksheet.rows()) {
             if (line_counter++ == 0) {
-                vedomost.append(kvp("report_number", 100000));   // line.findCell(1).value().getInt()
-                vedomost.append(kvp("report_date", "01.01.1941"));  // line.findCell(2).value().getString()
-                vedomost.append(kvp("report_source", "штаб ХХ сд")); // line.findCell(3).value().getString()
+                vedomost.append(kvp("report_number", line.findCell(1).value().getString()));
+                vedomost.append(kvp("report_date", line.findCell(2).value().getString()));
+                vedomost.append(kvp("report_source", line.findCell(3).value().getString()));
+
+                // vedomost.append(kvp("report_number", 100000));          // line.findCell(1).value().getInt()
+                // vedomost.append(kvp("report_date", "01.01.1941"));      // line.findCell(2).value().getString()
+                // vedomost.append(kvp("report_source", "штаб ХХ сд"));    // line.findCell(3).value().getString()
                 continue;
             }
             if (line.findCell(1).value().getString() == "Фамилия") continue;
-            auto soldier = CreateSoldier("1", "2", "3", "4", "5", "1", "2", "3", "4", "5", "1", "2", 101, 102, 103);
+            auto soldier = CreateSoldier(
+                line.findCell(1).value().getString(),
+                line.findCell(2).value().getString(),
+                line.findCell(3).value().getString(),
+                line.findCell(4).value().getString(),
+                line.findCell(5).value().getString(),
+                line.findCell(6).value().getString(),
+                line.findCell(7).value().getString(),
+                line.findCell(8).value().getString(),
+                line.findCell(9).value().getString(),
+                line.findCell(10).value().getString(),
+                line.findCell(11).value().getString(),
+                line.findCell(12).value().getString(),
+                strtol(line.findCell(13).value().getString().c_str(), nullptr, 10),
+                strtol(line.findCell(14).value().getString().c_str(), nullptr, 10),
+                strtol(line.findCell(15).value().getString().c_str(), nullptr, 10)
+                );
             soldiers.append(soldier.view());
         }
         vedomost.append(kvp("soldiers", soldiers));
