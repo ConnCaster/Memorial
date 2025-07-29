@@ -9,6 +9,7 @@
 
 class SoldierEntry {
 public:
+    SoldierEntry() = default;
     SoldierEntry(
         const std::string &last_name,
         const std::string &first_name,
@@ -107,11 +108,12 @@ public:
         std::string info = "\tФамилия: " + last_name_ +
                            "\n\tИмя: " + first_name_ +
                            "\n\tОтчество: " + patronymic_ +
-                           "\n\tМесто захоронения: " + burial_place_ + "\n===========================\n";
+                           "\n\tМесто захоронения: " + burial_place_ + "\n";
         return info;
     }
 
     friend bool operator==(const SoldierEntry &l, const SoldierEntry &r);
+    friend bool operator<(const SoldierEntry &l, const SoldierEntry &r);
 
 #ifdef BUILD_GOOGLE_TEST
 
@@ -603,16 +605,38 @@ namespace compare_utils {
 }
 
 bool operator==(const SoldierEntry &l, const SoldierEntry &r) {
-    return compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
+    return (compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
            compare_utils::CompareFirstName(compare_utils::Strip(l.first_name_), compare_utils::Strip(r.first_name_)) &&
            compare_utils::ComparePatronimic(compare_utils::Strip(l.patronymic_), compare_utils::Strip(r.patronymic_)) &&
-           compare_utils::CompareBirthdate(compare_utils::Strip(l.birthdate_), compare_utils::Strip(r.birthdate_));
+           compare_utils::CompareBirthdate(compare_utils::Strip(l.birthdate_), compare_utils::Strip(r.birthdate_)))
+            ||
+                (compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
+           compare_utils::ComparePatronimic(compare_utils::Strip(l.patronymic_), compare_utils::Strip(r.patronymic_)) &&
+           compare_utils::CompareBirthdate(compare_utils::Strip(l.birthdate_), compare_utils::Strip(r.birthdate_)) &&
+           compare_utils::ComparePatronimic(compare_utils::Strip(l.loss_date_), compare_utils::Strip(r.loss_date_))
+           )
+            ||
+                (compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
+           compare_utils::CompareBirthdate(compare_utils::Strip(l.birthdate_), compare_utils::Strip(r.birthdate_)) &&
+           compare_utils::ComparePatronimic(compare_utils::Strip(l.loss_date_), compare_utils::Strip(r.loss_date_))
+           )
+    ;
 
            /*||
            (
                compare_utils::CompareBurialPlace(compare_utils::Strip(l.burial_place_),compare_utils::Strip(l.burial_place_)) &&
     compare_utils::CompareMilitaryRank(compare_utils::Strip(l.military_rank_), compare_utils::Strip(l.military_rank_))
            );*/
+}
+
+bool operator<(const SoldierEntry &l, const SoldierEntry &r) {
+    if (l.last_name_ != r.last_name_) {
+        return l.last_name_ < r.last_name_;
+    }
+    if (l.first_name_ != r.first_name_) {
+        return l.first_name_ < r.first_name_;
+    }
+    return l.patronymic_ < r.patronymic_;
 }
 
 #endif //SOLDIERENTRY_H

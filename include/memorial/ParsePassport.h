@@ -29,10 +29,10 @@ public:
                 std::cout << "[Error] Error open file " << file_name << ". Continue..." << std::endl;
             }
 
-            auto opts = mongocxx::options::find{};
-            opts.no_cursor_timeout(true);
-            opts.batch_size(10);
-            auto cursor = vedomosti_collection_.find({}, opts);
+            // auto opts = mongocxx::options::find{};
+            // opts.no_cursor_timeout(true);
+            // opts.batch_size(10);
+            // auto cursor = vedomosti_collection_.find({}, opts);
 
             XLWorksheet passport_worksheet{};  // = xlsx_file.workbook().worksheet("Лист1");
 
@@ -53,9 +53,8 @@ public:
                 throw std::runtime_error("Valid worksheet name is not found in Passport");
             }
 
-            VedomostSearcher vedomost_searcher{passport_worksheet, std::move(cursor)};
+            VedomostSearcher vedomost_searcher{passport_worksheet, vedomosti_collection_};
             Vedomost found_vedomost = vedomost_searcher.Search();
-            std::cout << "[FOUND] " << found_vedomost.GetContent() << std::endl;
 
             xlsx_file.close();
         }
