@@ -36,7 +36,7 @@ set(BSONCXX_INCLUDE_DIRS "/usr/local/include/bsoncxx/v_noabi")
 add_executable(Memorial
         main.cpp
         include/memorial/cxxopts/cxxopts.h
-        )
+)
 target_include_directories(Memorial PRIVATE
         include
         ${MONGOCXX_INCLUDE_DIRS}

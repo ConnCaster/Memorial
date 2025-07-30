@@ -5,6 +5,6 @@ Doxygen need to be installed to generate the doxygen documentation
 -- BSONCXX: /usr/local/lib/libbsoncxx.so
 -- MONGOC_C: /usr/local/lib/libmongoc2.so
 -- BSON_C: /usr/local/lib/libbson2.so
--- Configuring done (0.1s)
--- Generating done (0.0s)
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
 -- Build files have been written to: /home/user/dir/programming/C++/Yaroslava/Memorial/cmake-build-debug-event-trace

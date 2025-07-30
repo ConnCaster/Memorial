@@ -9,6 +9,7 @@
 
 class SoldierEntry {
 public:
+    SoldierEntry() = default;
     SoldierEntry(
         const std::string &last_name,
         const std::string &first_name,
@@ -107,16 +108,18 @@ public:
         std::string info = "\tФамилия: " + last_name_ +
                            "\n\tИмя: " + first_name_ +
                            "\n\tОтчество: " + patronymic_ +
-                           "\n\tМесто захоронения: " + burial_place_ + "\n===========================\n";
+                           "\n\tМесто захоронения: " + burial_place_ + "\n";
         return info;
     }
 
     friend bool operator==(const SoldierEntry &l, const SoldierEntry &r);
+    friend bool operator<(const SoldierEntry &l, const SoldierEntry &r);
 
 #ifdef BUILD_GOOGLE_TEST
 
 public:
 #else
+
 private:
 #endif
     std::string last_name_;
@@ -183,29 +186,6 @@ namespace compare_utils {
         return str.substr(start, end - start + 1);
     }
 
-    // TODO: покрытие unit-тестами
-    void StripByUnderLine(std::string &str) {
-        if (str.empty()) {
-            return;
-        }
-
-        size_t start = 0;
-        while (start < str.size() && (str[start] == '_')) {
-            ++start;
-        }
-
-        if (start == str.size()) {
-            return;
-        }
-
-        size_t end = str.size() - 1;
-        while (end > start && (str[start] == '_')) {
-            --end;
-        }
-
-        str = str.substr(start, end - start + 1);
-    }
-
     size_t UTF8_Strlen(const std::string &str) {
         setlocale(LC_ALL, "en_US.utf8"); // Устанавливаем локаль для UTF-8
 
@@ -226,6 +206,31 @@ namespace compare_utils {
 
         return char_count;
     }
+
+    // TODO: покрытие unit-тестами
+    void StripByUnderLine(std::string &str) {
+        if (str.empty()) {
+            return;
+        }
+
+        size_t start = 0;
+        while (start < str.size() && (str[start] == '_')) {
+            ++start;
+        }
+
+        if (start == str.size()) {
+            return;
+        }
+
+        size_t end = str.size() - 1;
+        // size_t end = UTF8_Strlen(str) - 1;
+        while (end > start && (str[start] == '_')) {
+            --end;
+        }
+
+        str = str.substr(start, end - start + 1);
+    }
+
 
     // TODO: покрытие unit-тестами
     std::string RemoveSpaces(const std::string &str) {
@@ -524,7 +529,7 @@ namespace compare_utils {
         {"кв", "квартира"}
     };
 
-    // TODO: покрытие unit-тестами
+    /*// TODO: покрытие unit-тестами
     // Функция нормализации сокращений географических обозначений (приводит все варианты к единому представлению)
     std::string NormalizeGeo(const std::string &place) {
         // Ищем в карте нормализации
@@ -535,7 +540,7 @@ namespace compare_utils {
 
         // Если не нашли, возвращаем нормализованную версию (без пробелов, в нижнем регистре)
         return place;
-    }
+    }*/
 
     std::pair<std::string, std::string> FindGeoAbbr(std::vector<std::string> geo_elems) {
         for (auto [abbr, full_place]: normalization_map_geo) {
@@ -590,13 +595,48 @@ namespace compare_utils {
     bool operator==(const BurialPlace &l, const BurialPlace &r) {
         return l.places_ == r.places_;
     }
+
+    bool CompareBurialPlace(const std::string &l, const std::string &r) {
+        std::string left = StrToLower(l);
+        std::string right = StrToLower(r);
+        if (left == "null" || right == "null") return true;
+        return BurialPlace{left} == BurialPlace{right};
+    }
 }
 
 bool operator==(const SoldierEntry &l, const SoldierEntry &r) {
-    return compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
+    return (compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
            compare_utils::CompareFirstName(compare_utils::Strip(l.first_name_), compare_utils::Strip(r.first_name_)) &&
            compare_utils::ComparePatronimic(compare_utils::Strip(l.patronymic_), compare_utils::Strip(r.patronymic_)) &&
-           compare_utils::CompareBirthdate(l.birthdate_, r.birthdate_); // TODO: пропускать при false
+           compare_utils::CompareBirthdate(compare_utils::Strip(l.birthdate_), compare_utils::Strip(r.birthdate_)))
+            ||
+                (compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
+           compare_utils::ComparePatronimic(compare_utils::Strip(l.patronymic_), compare_utils::Strip(r.patronymic_)) &&
+           compare_utils::CompareBirthdate(compare_utils::Strip(l.birthdate_), compare_utils::Strip(r.birthdate_)) &&
+           compare_utils::ComparePatronimic(compare_utils::Strip(l.loss_date_), compare_utils::Strip(r.loss_date_))
+           )
+            ||
+                (compare_utils::CompareLastName(compare_utils::Strip(l.last_name_), compare_utils::Strip(r.last_name_)) &&
+           compare_utils::CompareBirthdate(compare_utils::Strip(l.birthdate_), compare_utils::Strip(r.birthdate_)) &&
+           compare_utils::ComparePatronimic(compare_utils::Strip(l.loss_date_), compare_utils::Strip(r.loss_date_))
+           )
+    ;
+
+           /*||
+           (
+               compare_utils::CompareBurialPlace(compare_utils::Strip(l.burial_place_),compare_utils::Strip(l.burial_place_)) &&
+    compare_utils::CompareMilitaryRank(compare_utils::Strip(l.military_rank_), compare_utils::Strip(l.military_rank_))
+           );*/
+}
+
+bool operator<(const SoldierEntry &l, const SoldierEntry &r) {
+    if (l.last_name_ != r.last_name_) {
+        return l.last_name_ < r.last_name_;
+    }
+    if (l.first_name_ != r.first_name_) {
+        return l.first_name_ < r.first_name_;
+    }
+    return l.patronymic_ < r.patronymic_;
 }
 
 #endif //SOLDIERENTRY_H
