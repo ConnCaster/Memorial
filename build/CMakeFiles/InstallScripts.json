@@ -1,0 +1,15 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/cmake_install.cmake",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/3rd_party/OpenXLSX/cmake_install.cmake",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/3rd_party/OpenXLSX/OpenXLSX/cmake_install.cmake",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/3rd_party/OpenXLSX/Documentation/cmake_install.cmake",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/3rd_party/OpenXLSX/Examples/cmake_install.cmake",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/3rd_party/OpenXLSX/Tests/cmake_install.cmake",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/_deps/googletest-build/cmake_install.cmake",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/home/user/dir/programming/C++/Yaroslava/Memorial/build/_deps/googletest-build/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

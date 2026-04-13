@@ -64,7 +64,7 @@ private:
     }
 
     void SaveOverlapsCounterForVedomost(Vedomost& vedomost, int counter) {
-        res_vedomosti_with_much_overlaps[vedomost] = counter;
+        res_vedomosti_with_much_overlaps[vedomost] += counter;
     }
 
     std::pair<Vedomost, int> GetTopVedomostByOverlaps() const {

@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/Memorial.dir/link.d CMakeFiles/Memorial.dir/main.cpp.o -o Memorial  -Wl,-rpath,/usr/local/lib output/libOpenXLSX.a /usr/local/lib/libmongocxx.so /usr/local/lib/libbsoncxx.so /usr/local/lib/libmongoc2.so /usr/local/lib/libbson2.so

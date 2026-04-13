@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/tests_google.dir/link.d CMakeFiles/tests_google.dir/tests/google_tests.cpp.o -o tests_google  -Wl,-rpath,/usr/local/lib lib/libgtest.a lib/libgtest_main.a output/libOpenXLSX.a /usr/local/lib/libmongocxx.so /usr/local/lib/libbsoncxx.so /usr/local/lib/libmongoc2.so /usr/local/lib/libbson2.so lib/libgtest.a
