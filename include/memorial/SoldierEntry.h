@@ -48,41 +48,53 @@ public:
     SoldierEntry(const bsoncxx::array::element &soldier) {
         try {
             if (soldier["last_name"] && soldier["last_name"].type() == bsoncxx::type::k_string) {
-                last_name_ = soldier["last_name"].get_string().value;
+                //last_name_ = soldier["last_name"].get_string().value;
+                last_name_ = std::string{soldier["last_name"].get_string().value.data(), soldier["last_name"].get_string().value.length()};
             }
             if (soldier["first_name"] && soldier["first_name"].type() == bsoncxx::type::k_string) {
-                first_name_ = soldier["first_name"].get_string().value;
+                // first_name_ = soldier["first_name"].get_string().value;
+                first_name_ = std::string{soldier["first_name"].get_string().value.data(), soldier["first_name"].get_string().value.length()};
             }
             if (soldier["patronymic"] && soldier["patronymic"].type() == bsoncxx::type::k_string) {
-                patronymic_ = soldier["patronymic"].get_string().value;
+                // patronymic_ = soldier["patronymic"].get_string().value;
+                patronymic_ = std::string{soldier["patronymic"].get_string().value.data(), soldier["patronymic"].get_string().value.length()};
             }
             if (soldier["birthdate"] && soldier["birthdate"].type() == bsoncxx::type::k_string) {
-                birthdate_ = soldier["birthdate"].get_string().value;
+                // birthdate_ = soldier["birthdate"].get_string().value;
+                birthdate_ = std::string{soldier["birthdate"].get_string().value.data(), soldier["birthdate"].get_string().value.length()};
             }
             if (soldier["birth_place"] && soldier["birth_place"].type() == bsoncxx::type::k_string) {
-                birth_place_ = soldier["birth_place"].get_string().value;
+                // birth_place_ = soldier["birth_place"].get_string().value;
+                birth_place_ = std::string{soldier["birth_place"].get_string().value.data(), soldier["birth_place"].get_string().value.length()};
             }
             if (soldier["conscription_date_and_place"] && soldier["conscription_date_and_place"].type() ==
                 bsoncxx::type::k_string) {
-                conscription_date_and_place_ = soldier["conscription_date_and_place"].get_string().value;
+                // conscription_date_and_place_ = soldier["conscription_date_and_place"].get_string().value;
+                conscription_date_and_place_ = std::string{soldier["conscription_date_and_place"].get_string().value.data(), soldier["conscription_date_and_place"].get_string().value.length()};
             }
             if (soldier["last_duty_place"] && soldier["last_duty_place"].type() == bsoncxx::type::k_string) {
-                last_duty_place_ = soldier["last_duty_place"].get_string().value;
+                // last_duty_place_ = soldier["last_duty_place"].get_string().value;
+                last_duty_place_ = std::string{soldier["last_duty_place"].get_string().value.data(), soldier["last_duty_place"].get_string().value.length()};
             }
             if (soldier["military_rank"] && soldier["military_rank"].type() == bsoncxx::type::k_string) {
-                military_rank_ = soldier["military_rank"].get_string().value;
+                // military_rank_ = soldier["military_rank"].get_string().value;
+                military_rank_ = std::string{soldier["military_rank"].get_string().value.data(), soldier["military_rank"].get_string().value.length()};
             }
             if (soldier["loss_reason"] && soldier["loss_reason"].type() == bsoncxx::type::k_string) {
-                loss_reason_ = soldier["loss_reason"].get_string().value;
+                // loss_reason_ = soldier["loss_reason"].get_string().value;
+                loss_reason_ = std::string{soldier["loss_reason"].get_string().value.data(), soldier["loss_reason"].get_string().value.length()};
             }
             if (soldier["loss_date"] && soldier["loss_date"].type() == bsoncxx::type::k_string) {
-                loss_date_ = soldier["loss_date"].get_string().value;
+                // loss_date_ = soldier["loss_date"].get_string().value;
+                loss_date_ = std::string{soldier["loss_date"].get_string().value.data(), soldier["loss_date"].get_string().value.length()};
             }
             if (soldier["burial_place"] && soldier["burial_place"].type() == bsoncxx::type::k_string) {
-                burial_place_ = soldier["burial_place"].get_string().value;
+                // burial_place_ = soldier["burial_place"].get_string().value;
+                 burial_place_ = std::string{soldier["burial_place"].get_string().value.data(), soldier["burial_place"].get_string().value.length()};
             }
             if (soldier["report_source"] && soldier["report_source"].type() == bsoncxx::type::k_string) {
-                report_source_ = soldier["report_source"].get_string().value;
+                // report_source_ = soldier["report_source"].get_string().value;
+                report_source_ = std::string{soldier["report_source"].get_string().value.data(), soldier["report_source"].get_string().value.length()};
             }
             if (soldier["source_fund_number"] && soldier["source_fund_number"].type() == bsoncxx::type::k_int32) {
                 source_fund_number_ = soldier["source_fund_number"].get_int32().value;
