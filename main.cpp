@@ -1,5 +1,7 @@
 #include <cstdlib>
 #include <iostream>
+#include <algorithm>
+#include <iterator>
 
 #include <bsoncxx/builder/basic/document.hpp>
 
@@ -9,6 +11,7 @@
 
 #include "memorial/Vedomost.h"
 #include "memorial/ParsePassport.h"
+#include "memorial/FindByYear.h"
 #include "memorial/cxxopts/cxxopts.h"
 #include "memorial/upload/Upload.h"
 
@@ -19,6 +22,7 @@ int main(int argc, char* argv[]) {
     options.add_options()
       ("p,passport", "Путь к файлу с паспортом .xlsx", cxxopts::value<std::string>())
       ("u,upload", "Режим загрузки ведомостей в БД: путь к директории с ведомостями в формате .xlsx", cxxopts::value<std::string>())
+      ("f,find_by_year", "Поиск по всем загруженным ведомостям людей по дате выбытия. Использовать один год, например, 1943, либо несколько лет, каждый год отделив запятой: 1942,1943,1944", cxxopts::value<std::string>())
       ("h,help", "Вывести краткое руководство по запуску приложения")
       ;
 
@@ -43,8 +47,47 @@ int main(int argc, char* argv[]) {
         return 0;
     }
 
+    //  Если просят поиск по году во всех ведомосятх
+    if (result.count("find_by_year")) {
+        std::string years_args = result["find_by_year"].as<std::string>();
+        std::vector<int> years{};
+        try {
+            years = ParseYearsFromArg(years_args);
+        } catch (const std::exception& e) {
+            std::cout << "Ошибка обработки аргумента: год(-ы) введены некорректно" << std::endl;
+        }
+        if (years.empty()) {
+            std::cout << "Не введены годы для поиска по ведомостям" << std::endl;
+            return 1;
+        }
+        std::cout << "Год(-ы) для поиска в ведомостях: ";
+        std::copy(years.begin(), years.end(), std::ostream_iterator<int>(std::cout, ","));
+        std::cout << std::endl;
+
+        using bsoncxx::builder::basic::kvp;
+        using bsoncxx::builder::basic::make_document;
+
+        mongocxx::instance inst;
+
+        try {
+            auto client = mongocxx::client{uri};
+            auto db = client["memorial"];
+            auto vedomosti_collection = db["vedomosti"];
+
+            FindInAllVedomosty finder_in_vedomosty{vedomosti_collection, years};
+            finder_in_vedomosty.Find();
+
+            return EXIT_SUCCESS;
+        } catch (std::exception const& ex) {
+            std::cout << "[Error] " << ex.what() << std::endl;
+            return EXIT_FAILURE;
+        }
+
+        return 0;
+    }
+
     if (!result.count("passport")) {
-        std::cerr << "Ошибка: необходимо указать путь к файлу с паспортом с помощью параметра -p или --passport" << std::endl;
+        std::cerr << "Ошибка: необходимо указать путь к файлу с паспортом с помощью параметра -p или --passport или посмотреть помощь: -h или --help" << std::endl;
         std::cout << options.help() << std::endl;
         return 1;
     }

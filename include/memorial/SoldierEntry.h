@@ -124,6 +124,32 @@ public:
         return info;
     }
 
+    int GetYear() const {
+
+        auto pos_to_point = loss_date_.find_last_of(".");
+        if (pos_to_point == std::string::npos)        {
+            char *end_ptr{nullptr};
+            int year = std::strtol(loss_date_.data(), &end_ptr, 10);
+            if (end_ptr == nullptr)
+            {
+                return 0;
+            }
+            return year;
+        } else  {
+            std::string year_from_date = loss_date_.substr(pos_to_point + 1, loss_date_.size() - pos_to_point + 1);
+            char *end_ptr{nullptr};
+            int year = std::strtol(loss_date_.data(), &end_ptr, 10);
+            if (end_ptr == nullptr)
+            {
+                return 0;
+            }
+            return year;
+        }
+
+
+
+    }
+
     friend bool operator==(const SoldierEntry &l, const SoldierEntry &r);
     friend bool operator<(const SoldierEntry &l, const SoldierEntry &r);
 
